@@ -11,7 +11,6 @@ phases:
         nodejs: 14
     commands:
         - echo NPM dependencies...
-        - npm cache clean -–force
         - npm install
         - npm install -g @angular/cli
   build:
