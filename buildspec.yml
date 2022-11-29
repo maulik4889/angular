@@ -16,7 +16,11 @@ phases:
   build:
     commands:
         - echo Build started 
-        - npm run ng build
+        - ng build --prod --aot
+  post_build:
+     commands:
+      - aws s3 cp dist s3://${S3_BUCKET}
+      - echo Build completed on `date`
 artifacts:
     files:
         - '**/*'
