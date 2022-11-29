@@ -17,9 +17,9 @@ phases:
   build:
     commands:
         - echo Build started 
-        - ng build
+        - npm run build --force
 artifacts:
     files:
         - '**/*'
-    base-directory: 'dist*'
+    base-directory: '**/dist/angular-tour-of-heroes'
     discard-paths: yes
