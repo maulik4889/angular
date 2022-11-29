@@ -20,5 +20,5 @@ phases:
 artifacts:
     files:
         - '**/*'
-    base-directory: '**/dist/angular-tour-of-heroes'
+    base-directory: 'dist*'
     discard-paths: yes
