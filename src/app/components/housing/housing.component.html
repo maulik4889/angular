@@ -1,0 +1,447 @@
+
+
+
+  <div class="p-4">
+
+<div  class="row justify-content-center ">
+<div  class="col-12 col-lg-4 mb-3">
+  <div  class="expat_btn justify-content-center p-cursor d-flex align-items-center w-100 "><button  class=" Where-to-live" (click)="toNeighbours()">&nbsp;Where to live &nbsp;</button>
+  </div>
+</div>
+<div  class="col-12 col-lg-4 mb-3"> 
+  <div  class="expat_btn justify-content-center d-flex p-cursor align-items-center w-100 "><button  class=" How-to-find-housing" (click)="toHousing()">How to find housing</button>
+  </div>
+</div>
+<div  class="col-12 col-lg-4 mb-3" >
+<div  class="expat_btn justify-content-center d-flex p-cursor align-items-center w-100 "><button  class=" What-you-need-to-rent"  (click)="toRent()">What you need to rent </button>
+</div>
+</div>
+</div>
+
+
+ 
+  <h6  class="main-title ibm ms-5  subtitle mt-4" id="toNeighbours"> Top Neighbourhoods in London</h6>
+  <div class="row justify-content-center " >
+    <div class="col-1 col-lg-1">
+      <span (click)="previous()" class="p-cursor text-center"><i class="fa fa-arrow-left next-icon"></i></span>
+
+</div>
+<div class="col-10 col-lg-10">
+<ngx-slick-carousel
+class="carousel "
+#slickModal="slick-carousel"
+[config]="slideConfig"
+(breakpoint)="breakpoint($event)"
+>
+<div ngxSlickItem *ngFor="let slide of slides ;let i = index" class="slide desktop-feed">
+  <div class="digit-circle1"><span>{{i+1}}</span></div>
+
+  <div class="_sld-item text-center corousel-card" >
+   
+   <div>
+      <img
+     src="assets/images/{{slide.image}}"
+        alt=""
+        class="m-auto slide-img" style="width:80%">
+<p class="libre">
+    <b>{{slide.title}}</b><br>
+    <span class="votes_count">{{slide.votes}} Votes </span><br><br>
+    <b> Average Rentals</b><br>
+    1-Bed: £{{slide.one_bed_price}}<br>
+    3-Bed: £{{slide.three_bed_price}}
+  </p>
+</div>
+   
+    <!-- <ngx-picture
+    src="{{baseUrl}}/storage/user/{{slide.user.image}}"
+    alt="test"
+    class="m-auto slide-img"
+    [lazyLoad]="true"
+    #picture 
+  ></ngx-picture> -->
+
+
+   
+  
+    <!-- <h5 style="color: black" class="tt mt-2" routerLink="/host/{{slide.user.host_url}}">{{ slide.user.full_name }}</h5> -->
+
+    <!-- <p>{{ slide.date }}</p> -->
+  </div>
+
+   
+</div>
+
+
+</ngx-slick-carousel>
+
+
+</div>
+<div class="col-1 col-lg-1">
+<span (click)="next()" class="p-cursor text-center"><i class="fa fa-arrow-right prev-icon"></i></span>
+
+</div>
+</div>
+<h6  class="main-title ibm  subtitle mb-3 mt-5 ms-5" id="toHousing">How to find housing in London
+</h6>
+<p class="libre ms-5"> Search properties on the top websites: </p>
+
+<div class="row justify-content-center">
+  <div class="col-1 col-lg-1">
+    <span (click)="previous1()" class="p-cursor text-center left-mobile"><i
+        class="fa fa-arrow-left next-icon"></i></span>
+
+  </div>
+  <div class="col-10 col-lg-10">
+<ngx-slick-carousel
+class="carousel "
+#slickModal1="slick-carousel"
+[config]="slideConfig1"
+>
+<div ngxSlickItem *ngFor="let slide of slides1;let i = index" class="slide">
+
+  <div class="_sld-item text-center corousel-card1" >
+   
+   <div>
+    <p class="ibm mt-4">
+      <a href="{{slide.link}}" target="_blank" style="color:black">  <b>{{slide.title}}</b><br></a></p>
+      <a href="{{slide.link}}" target="_blank"><img
+     src="{{slide.img1}}"
+        alt=""
+        class="slide-img img{{i+1}}">
+        <img
+        src="{{slide.img2}}"
+           alt=""
+           class=" slide-img" style="width:80%;margin-left:10%">
+          </a>
+<p class="libre mt-3">
+    <b><img src="assets/images/trophy.png" style="
+      width: 30px;
+      display: inline;
+  " *ngIf="slide.subtitle != ' '">&nbsp;{{slide.subtitle}}</b><br>
+    
+  </p>
+</div>
+   
+    <!-- <ngx-picture
+    src="{{baseUrl}}/storage/user/{{slide.user.image}}"
+    alt="test"
+    class="m-auto slide-img"
+    [lazyLoad]="true"
+    #picture 
+  ></ngx-picture> -->
+
+
+   
+  
+    <!-- <h5 style="color: black" class="tt mt-2" routerLink="/host/{{slide.user.host_url}}">{{ slide.user.full_name }}</h5> -->
+
+    <!-- <p>{{ slide.date }}</p> -->
+  </div>
+
+   
+</div>
+</ngx-slick-carousel>
+</div>
+<div class="col-1 col-lg-1">
+  <span (click)="next1()" class="p-cursor text-center right-mobile"><i
+      class="fa fa-arrow-right prev-icon"></i></span>
+
+</div>
+</div>
+<p  class="ibm ms-5" id="toRealestate" >alternatively, work with a real estate agent:</p>
+<div  class="mid-para _mid-bg" >
+<br>
+<div class="digit-circle_p mt-2 ms-5  mr-5" style="background-color:#a7d6d9"><span>1</span></div>
+
+<p class="libre " >
+
+  Choose the area where you want to rent
+  </p>
+
+<div class="digit-circle_p mt-2 ms-5  mr-5" style="background-color:#5ce1e6"><span>2</span></div>
+
+<p class=" libre " >
+  Search for “estate agents” in the area on Google Maps 
+  </p>
+  
+
+<div class="digit-circle_p mt-2 ms-5 mr-5" style="background-color:#00c2cb"><span>3</span></div>
+
+<p class="libre " >
+
+  Talk to selected agents about what you’re looking for   </p>
+
+<div class="digit-circle_p mt-2 ms-5  mr-5" style="background-color:#03989e"><span>4</span></div>
+
+<p class=" libre " >
+
+  Only pay when you find a rental. Third party fees are banned in UK. You can find the permitted fees <a style="color:#13c6f5;text-decoration: underline;font-style:italic;" href="https://www.gov.uk/government/publications/tenant-fees-act-2019-guidance" target="_blank">here </a>   </p>
+  <br>
+
+
+</div>
+
+
+
+<h6  class="main-title ibm subtitle mt-5 ms-5" id="toRent"> What you need to rent in London
+</h6>
+
+<div class="row justify-content-center">
+  <div class="col-1 col-lg-1">
+    <span (click)="previous2()" class="p-cursor text-center left-mobile"><i class="fa fa-arrow-left next-icon"></i></span>
+  
+  </div>
+  <div class="col-10 col-lg-10">
+<div  style="background-color:#efeff0;padding-bottom:1.5rem ;">
+ 
+  <ngx-slick-carousel
+  class="carousel "
+  #slickModal2="slick-carousel"
+  [config]="slideConfig2"
+>
+  <div ngxSlickItem *ngFor="let slide of slides2| slice:0:4;let i = index" class="slide">
+    <div class="digit-circle1"><span>{{i+1}}</span></div>
+
+    <div class="_sld-item text-center corousel-card2" >
+     
+     <div>
+<br>
+
+<p class="ibm">
+  <b>{{slide.title}}</b></p><br>
+
+        <img
+       src="{{slide.img}}"
+          alt=""
+          class="m-auto slide-img" style="width:30%">
+<p class="libre mt-3">
+  {{slide. subtitle}}
+   <span *ngIf="i==2">&nbsp;<br><b>Deposit Cap by law:</b> {{slide. para2}}</span>
+
+    <span *ngIf="i==0"><br>&nbsp;<br> &nbsp;<br><b>Prove your right to rent <a class="RTR_txt"  href="https://right-to-rent.service.gov.uk/rtr-prove/id-question" target="_blank">here</a></b>
+    </span><br>
+     <span *ngIf="i==0"><b>Read more about RTR <a class="RTR_txt" href=" https://www.gov.uk/prove-right-to-rent" target="_blank">here</a><br> &nbsp;<br>&nbsp;</b>
+    </span>
+    <br>
+    </p>
+  </div>
+  
+    </div>
+
+     
+  </div>
+</ngx-slick-carousel>
+<p class="ms-5" ><span class="info-icon">i</span>&nbsp;Information collected from   https://www.gov.uk/ <br>
+ <span class="p-margin-info-span">Read your rights and responsibilities as a tenant <a  class="RTR_txt" href="https://www.gov.uk/private-renting" target="_blank"> here</a> </span></p>
+</div>
+</div>
+<div class="col-1 col-lg-1">
+  <span (click)="next2()" class="p-cursor text-center right-mobile"><i class="fa fa-arrow-right prev-icon"></i></span>
+
+</div>
+</div>
+
+</div>
+
+
+<!--Review model  -->
+<ng-template #votetemplate>
+  <div class="review-modal fgt_modal _reset_modal schedule-cancel-wrap p-0 lesstion-review latest-review" >
+     <div class="modal-header">
+        <div class="modal-sec-title brdr-btm-theme">
+           <h4 class=""> Submit Your Vote</h4>
+        </div>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+           &times;
+        </button>
+     </div>
+     <div class="modal-body pt-0">
+        <div class="row align-items-center">
+           <div class="col-12">
+            <form [formGroup]="bookingForm" (ngSubmit)="bestNeighbours()">
+
+              <div>
+                <div class="form-group mb-5">
+                  <label>Your Email</label>
+
+                     <input type="email" class="form-control" placeholder="Write your email" rows="3"
+                     formControlName="email" required>
+                     <div *ngIf="(submitted || formInputs['email'].touched) && formInputs['email'].errors">
+                      <div *ngIf="formInputs['email'].errors['required']" [ngClass]="{'error': true}">Email is required.</div>
+                   
+                   
+                      <div *ngIf="formInputs['email'].errors['email']" [ngClass]="{'error': true}">Email is not valid.</div>
+                   
+                      </div>
+               </div>
+                 <div class="form-group mb-5">
+                  <label>                  The Best London Neighbourhood (in your eyes 😍) 
+                  </label>
+
+                    <textarea class="form-control" placeholder="Write you place here…" rows="2"
+                     formControlName="place" required></textarea>
+                     <div *ngIf="(submitted || formInputs['place'].touched) && formInputs['place'].errors">
+                      <div *ngIf="formInputs['place'].errors['required']" [ngClass]="{'error': true}">Place is required.</div>
+                   
+                   
+                      
+                   
+                      </div>
+                 </div>
+                 <div class="bn-btn text-center">
+                    <button  class="btn btn_default theme  vote"
+                       >Vote</button>
+                 </div>
+              </div>
+              </form>
+           </div>
+        </div>
+     </div>
+  </div>
+</ng-template>
+<ng-template #sendmessage>
+  <div class="review-modal fgt_modal _reset_modal schedule-cancel-wrap p-0 lesstion-review latest-review" >
+     <div class="modal-header">
+        <div class="modal-sec-title brdr-btm-theme">
+           <h4 class=""> Send a Message</h4>
+           <p>We’ll match you to an expat who will reply to your questions about London </p>
+        </div>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+           &times;
+        </button>
+     </div>
+     <div class="modal-body pt-0">
+        <div class="row align-items-center">
+           <div class="col-12">
+            <form [formGroup]="bookingForm" (ngSubmit)="sendMessage()">
+
+              <div>
+                <div class="form-group mb-5">
+                  <label>Your Email</label>
+
+                     <input type="email" class="form-control" placeholder="Write you email" rows="3"
+                     formControlName="email" required>
+                     <div *ngIf="(submitted1 || formInputs['email'].touched) && formInputs['email'].errors">
+                      <div *ngIf="formInputs['email'].errors['required']" [ngClass]="{'error': true}">Email is required.</div>
+                   
+                   
+                      <div *ngIf="formInputs['email'].errors['email']" [ngClass]="{'error': true}">Email is not valid.</div>
+                   
+                      </div>
+               </div>
+                 <div class="form-group mb-5">
+                  <label>                 Your Message 
+                  </label>
+
+                    <textarea class="form-control" placeholder="Write your message" rows="2"
+                     formControlName="place" required></textarea>
+                     <div *ngIf="(submitted1 || formInputs['place'].touched) && formInputs['place'].errors">
+                      <div *ngIf="formInputs['place'].errors['required']" [ngClass]="{'error': true}">Message is required.</div>
+                   
+                   
+                      
+                   
+                      </div>
+                 </div>
+                 <div class="bn-btn text-center">
+                    <button  class="btn btn_default theme "
+                       >Send</button>
+                 </div>
+              </div>
+              </form>
+           </div>
+        </div>
+     </div>
+  </div>
+</ng-template>
+
+<ng-template #checklist>
+  <div class="review-modal fgt_modal _reset_modal schedule-cancel-wrap p-0 lesstion-review latest-review" >
+     <div class="modal-header">
+        <div class="modal-sec-title brdr-btm-theme">
+           <h4 class=" text-center"> <u>London Checklist </u><br>
+          </h4>
+
+          <h4 class=" text-center">COMING SOON<br></h4>
+           <p class="text-center">Subscribe to our wait list and you’ll receive the London Checklist in your inbox as soon as it’s ready </p>
+        </div>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+           &times;
+        </button>
+     </div>
+     <div class="modal-body pt-0">
+        <div class="row align-items-center">
+           <div class="col-12">
+            <form [formGroup]="checklistForm" (ngSubmit)="checklistSubmit()">
+
+              <div>
+                <div class="form-group mb-5">
+                  <label>Your Email</label>
+
+                     <input type="text" class="form-control" placeholder="Write your email" 
+                     formControlName="email" >
+                     <div *ngIf="(submitted2 || formInputs1['email'].touched) && formInputs1['email'].errors">
+                      <div *ngIf="formInputs1['email'].errors['required']" [ngClass]="{'error': true}">Email is required.</div>
+                   
+                   
+                      <div *ngIf="formInputs1['email'].errors['email']" [ngClass]="{'error': true}">Email is not valid.</div>
+                   
+                      </div>
+               </div>
+                 
+                 <div class="bn-btn text-center">
+                    <button  class="btn btn_default theme "
+                       >Send</button>
+                 </div>
+              </div>
+              </form>
+           </div>
+        </div>
+     </div>
+  </div>
+</ng-template>
+
+<ng-template #requestbuddy >
+  <div class=" schedule-cancel-wrap p-0 lesstion-review latest-review"  >
+     <div class="modal-header">
+        <div class="modal-sec-title brdr-btm-theme">
+           <b class="">COMING SOON! Just like this kitten, the service is not fully developed yet </b>
+        </div>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+           &times;
+        </button>
+     </div>
+     <div  >
+      <img src="assets/images/kitten.png" style="width:100%">
+    
+     </div>
+     <p class="text-center mt-5 ">Subscribe to our wait list and you’ll receive the exclusive access as soon as it’s live </p>
+     <div class="row justify-content-center  mb-5">
+     <div class="col-6" >
+      <form [formGroup]="bookingForm1" (ngSubmit)="bookingEnquiry()">
+
+        <div>
+          <div class="form-group mb-5">
+            <label>Your Email</label>
+
+               <input type="text" class="form-control" placeholder="Write your email" 
+               formControlName="email" >
+               <div *ngIf="(submitted3 || formInputs2['email'].touched) && formInputs2['email'].errors">
+                <div *ngIf="formInputs2['email'].errors['required']" [ngClass]="{'error': true}">Email is required.</div>
+             
+             
+                <div *ngIf="formInputs2['email'].errors['email']" [ngClass]="{'error': true}">Email is not valid.</div>
+             
+                </div>
+         </div>
+           
+           <div class="bn-btn text-center">
+              <button  class="btn btn_default theme "
+                 >Subscribe</button>
+           </div>
+        </div>
+        </form>
+     </div>
+    </div>
+  </div>
+</ng-template>

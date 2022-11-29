@@ -1,0 +1,15 @@
+<div class="d-flex" id="wrapper">
+    <app-page-title></app-page-title>
+
+    <div id="page-content-wrapper" class="w-100" [ngClass]=" this.router.url != '/create-profile' ? 'all-website-bg-color' : ''" >
+
+<app-dashboard-header></app-dashboard-header>
+
+
+    <router-outlet></router-outlet>
+
+    </div>
+</div>
+<app-chat></app-chat>
+
+<app-footer></app-footer>

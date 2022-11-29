@@ -1,0 +1,313 @@
+.ng5-slider .ng5-slider-selection {
+   background: #ff8300;
+}  
+// student profile wrap
+.theme-green .bs-datepicker-head {
+   @include gradient-horizontal($start-color: #ff4b00, $end-color: #ffac00, $start-percent: 0%, $end-percent: 100%);
+
+}
+.theme-green .bs-datepicker-body table td span.selected, .theme-green .bs-datepicker-body table td.selected span, .theme-green .bs-datepicker-body table td span[class*="select-"]:after, .theme-green .bs-datepicker-body table td[class*="select-"] span:after {
+   @include gradient-horizontal($start-color: #ff4b00, $end-color: #ffac00, $start-percent: 0%, $end-percent: 100%);
+
+}
+.theme-green .bs-datepicker-body table td.week span {
+display:none;}
+
+.student-profile-wrap{
+   .sch_content .sec-content{
+      font-size: 18px !important;  
+      color: $black !important;
+
+      
+   }
+   
+} 
+
+.student-profile-wrap,.search-result-wrap,.profile-wrap,.teacher-profile-wrap{
+   ._schedule-section { 
+      .card-body {
+         .content {
+            font-size: 1rem;
+         }
+      }
+   }
+   .sidebar-title .title{
+      font-size: 22px;
+      color: #4D4D4D;
+   }
+   .img-wrap{
+      margin-top: -60px;
+   }
+   .bg-color {
+      @include gradient-horizontal($start-color: #ff4b00, $end-color: #ffac00, $start-percent: 0%, $end-percent: 100%);
+
+      height: 112px;
+   }
+   .form-control.textarea-input {
+      resize:none;
+      height: 105px;
+   }
+   ._buttons.side-button{
+      .btn_default{
+         min-height: 26px;
+         min-width: 60px;
+         line-height: 26px;
+         font-size: 14px;
+         padding: 0;
+         color: $theme-default;
+         background-color: transparent;
+         padding:4px 21px;
+
+         &:hover{
+            background-color: $theme-default;
+            color: $white;
+         }
+      }   
+   }  
+   .sidebar-number-content{
+      padding-top: 25px;
+      padding-bottom: 25px;
+      padding-left: 36px;
+      padding-right: 36px;
+      border: 1px solid #EEEEEE;
+      
+      .number{
+         color: $theme-default;
+      }
+   } 
+   .sidebar-content{
+      padding-left: 36px;
+      padding-right: 36px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      &.content-btn{
+         border-bottom: 1px solid #EEEEEE; 
+      }
+   }
+}
+
+
+// teacher-profile-wrap
+
+.teacher-profile-wrap {
+   .teacher-profile-content {
+      div.sch_content .sec-content {
+         font-size: 21px;
+      }
+      .profile-content{
+         padding-top: 25px;
+         padding-bottom: 25px;
+         padding-left: 36px;
+         padding-right: 36px;
+         border: 1px solid #EEEEEE;
+      } 
+   }
+   .book-lesson-btn{
+      .btn_default{
+         min-height: 50px;
+         line-height: 50px;
+      }
+   }
+   .btn-side{
+      margin-bottom: 38px;
+   }
+}
+
+
+// student profile into profile
+
+.profile-wrap._schedule{
+   .nav-pills {
+      border-bottom: 1px solid #cccccc;
+      .nav-link{
+         background-color: transparent; 
+         color: #9B9B9B;
+         &.active{
+            background-color: $white;
+            color: $theme-default;
+         }
+      }     
+   }
+   .profile-sec ._schedule-section{
+      padding: 30px;
+   }
+   .skills-field,.interest-field {
+      margin-bottom: 37px;
+   }
+   .form-content.personal-info{
+      .label{
+         margin-bottom: 0px;
+         color: #9B9B9B;
+      }
+      input::placeholder {
+         color:$black;
+      }
+      .form-control{
+         border: none;
+         padding-left: 0px;
+         padding-top: 0px;
+         color: $black;
+      }
+   }
+   .form-group {
+      .week-title{
+         margin-bottom: 13px !important;
+      }
+      .days-wrap { 
+         .days-list{
+             margin-right: 20px;
+            .days-link {
+               border: 1px solid $theme-default;
+               width: 40px;
+               height: 40px;
+               color: $theme-default;
+               border-radius: 100%;
+               display: flex;
+               align-items:center;
+               background-color: $white;
+               justify-content: center;
+            }
+         }   
+      }   
+   }
+
+   .form-group {
+      position: relative;
+      .form-control-file {
+         width: 20px;
+         height: 20px;
+         opacity: 0;
+         visibility: hidden;
+         background: 0 0;
+         -webkit-appearance: none;
+         appearance: none;
+         -moz-appearance: none;
+         cursor: pointer;
+         border: 0;
+         position: absolute;
+      } 
+      .file-icon{
+         cursor: pointer;
+         color: #9B9B9B;
+         background-color: #F6F6F6;
+         width: 80px; 
+         height:80px;
+         margin-top: 23px;
+      }  
+   } 
+
+} 
+
+
+// profile1-wrap
+
+.profile1-wrap{   
+   .form-group:last-child{
+      margin-bottom: 0px;
+   }
+   .select-group select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      // background: white url("assets/images/select-arrow.png") no-repeat scroll 96% center; 
+      cursor: pointer;
+   }
+   &.form-space{
+      margin-bottom: 60px;
+   }
+   ._buttons.side-button{
+      .btn_default{
+         min-height: 52px;
+         min-width: 137px;
+         line-height: 52px;
+         font-size: 14px;
+         padding: 0;
+         color: #0072FF;
+         border: 1px solid #0072FF;
+         padding:4px 21px;
+
+         &:hover{
+            background-color: #0072FF;
+            color: $white;
+         }
+      }   
+   }
+
+   .document-box-wrap{
+      height: 160px;
+      width: 100%;  
+      border: 1px solid #CCCCCC; 
+      border-style: dotted;
+      border-radius: 4px;
+   }  
+   input::placeholder {
+      font-size:1rem;
+   }   
+   .profile1-content{
+      margin-bottom: 37px;
+   } 
+   .browser_height{
+      // border: 1px solid #EEEEEE;
+    //   width: 280px;
+      height: 275px;
+   }   
+   .form-group {
+      position: relative;
+      .form-control-file {
+         width: 20px;
+         height: 20px;
+         opacity: 0;
+         visibility: hidden;
+         background: 0 0;
+         -webkit-appearance: none;
+         appearance: none;
+         -moz-appearance: none;
+         cursor: pointer;
+         border: 0;
+         position: absolute;
+      }
+      .upload-link{
+         color: $black-72;
+      } 
+      .edit-badge{
+         position: absolute;
+         right: 0;
+         background-color:$theme-default;
+         width: 40px;
+         height: 40px;
+         bottom: 30px;
+         border-radius: 100px;
+      }
+   }   
+}   
+
+// follower popup
+
+.fgt_modal{
+
+   .modal-body{
+      .follow-list-main {
+         border-bottom: 1px solid #e6e6e6;
+         padding-bottom: 20px;
+         padding-top: 20px;
+         &:last-child{
+            border-bottom:0;
+            padding-bottom:0;
+         }
+         .follow-list-name{
+            img{
+               width: 50px;
+               margin-right: 15px;
+            }
+         }
+         .bn-btn a {
+            min-width: 160px !important;
+            min-height: 40px !important;
+            line-height: 40px !important;
+        }
+     }
+      
+   }
+   
+}

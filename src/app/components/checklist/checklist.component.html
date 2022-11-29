@@ -1,0 +1,49 @@
+
+  
+<section class="p-5">
+  
+
+   <div class="row">
+      <div class="col-md-12 ">
+         <h3 class="main-title ibm  video-subtitle mr-3">My Moving to  <i><span style="color:#31abab;">London</span> Checklist</i></h3>
+      
+      </div>
+    </div>
+    <div *ngFor="let tsk of category_tasks">
+      <div class="checklist-heading mt-3">{{tsk.title}}</div>
+      <div style="background-color:white;padding-top:10px;padding-left:20px; padding-right:30px;padding-bottom:10px;font-size:20px;border-bottom:1px solid lightgray" *ngFor="let ts of tsk.tasks">
+        <label><span  *ngIf="(ts.user_task.length ==1) || (flag== true)" class="p-cursor" style="position:relative;top:7px;font-size:30px;color:rgb(142, 234, 142);margin-right:10px" (click)="selectChecklist(ts.id)"><i class='bx bxs-check-circle'></i></span>  <span (click)="selectChecklist(ts.id)" class="p-cursor" *ngIf="(ts.user_task.length  ==0) || (flag== false)" style="position:relative;top:4px;font-size:25px;color:black;margin-right:10px"><i class="fa-regular fa-circle"></i></span>{{ts.task}}</label>
+     </div>
+  </div>
+   <!-- <div style="background-color:white;padding-top:10px;padding-left:20px; padding-right:30px;padding-bottom:10px;font-size:20px;border-bottom:1px solid lightgray">
+      <label><span style="font-size:15px;color:orange;margin-right:10px"><i class='bx bxs-square'></i></span>Narrow down my top neighbourhoods</label>
+   </div>
+   <div style="background-color:white;padding-top:10px;padding-left:20px; padding-right:30px;padding-bottom:10px;font-size:20px;border-bottom:1px solid lightgray">
+      <label><span style="font-size:15px;color:orange;margin-right:10px"><i class='bx bxs-square'></i></span>Narrow down my top neighbourhoods</label>
+   </div>
+   <div style="background-color:white;padding-top:10px;padding-left:20px; padding-right:30px;padding-bottom:10px;font-size:20px;border-bottom:1px solid lightgray">
+      <label><span style="font-size:15px;color:orange;margin-right:10px"><i class='bx bxs-square'></i></span>Narrow down my top neighbourhoods</label>
+   </div>
+   <div style="background-color:white;padding-top:10px;padding-left:20px; padding-right:30px;padding-bottom:10px;font-size:20px;">
+      <label><span style="font-size:15px;color:orange;margin-right:10px"><i class='bx bxs-square'></i></span>Narrow down my top neighbourhoods</label>
+   </div>
+
+    <div class="checklist-heading mt-3">Banking</div>
+    <div style="background-color:white;padding-top:10px;padding-left:20px; padding-right:30px;padding-bottom:10px;font-size:20px;border-bottom:1px solid lightgray">
+      <label><span style="font-size:15px;color:orange;margin-right:10px"><i class='bx bxs-square'></i></span>Narrow down my top neighbourhoods</label>
+   </div>
+   <div style="background-color:white;padding-top:10px;padding-left:20px; padding-right:30px;padding-bottom:10px;font-size:20px;border-bottom:1px solid lightgray">
+      <label><span style="font-size:15px;color:orange;margin-right:10px"><i class='bx bxs-square'></i></span>Narrow down my top neighbourhoods</label>
+   </div>
+   <div style="background-color:white;padding-top:10px;padding-left:20px; padding-right:30px;padding-bottom:10px;font-size:20px;border-bottom:1px solid lightgray">
+      <label><span style="font-size:15px;color:orange;margin-right:10px"><i class='bx bxs-square'></i></span>Narrow down my top neighbourhoods</label>
+   </div>
+   <div style="background-color:white;padding-top:10px;padding-left:20px; padding-right:30px;padding-bottom:10px;font-size:20px;border-bottom:1px solid lightgray">
+      <label><span style="font-size:15px;color:orange;margin-right:10px"><i class='bx bxs-square'></i></span>Narrow down my top neighbourhoods</label>
+   </div>
+   <div style="background-color:white;padding-top:10px;padding-left:20px; padding-right:30px;padding-bottom:10px;font-size:20px;">
+      <label><span style="font-size:15px;color:orange;margin-right:10px"><i class='bx bxs-square'></i></span>Narrow down my top neighbourhoods</label>
+   </div> -->
+</section>             
+             
+          

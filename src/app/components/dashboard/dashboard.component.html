@@ -1,0 +1,86 @@
+<div class="_pages dashboard_page">
+   
+   <br>
+   <h3 class="ibm text-center">Hi, <span class="txt-blue"></span> Welcome to the dashboard!</h3>
+   <br>
+
+
+   <div class="row justify-content-center">
+      <div class="col-12 col-lg-5 " >
+            <div class="span-tag">
+               <h3 class="hiw ibm text-center video-subtitle mb-3 mt-3">Your <i><span class="txt-blue">moving progress</span></i></h3>
+               <div style="font-size:40px !important">
+                  <circle-progress
+                     [percent]= "percentage">
+                  </circle-progress>
+            </div>
+            </div>     
+      </div>
+    <div class="col-12 col-lg-5">
+      <div class="span-tag">
+         <h3 class="hiw ibm text-center video-subtitle mb-3 mt-3">Your <i><span class="txt-blue">next tasks</span></i></h3>
+         <div style="display:inline-block; justify-items: left !important;text-align:left">
+            <div style="background-color:white;padding-top:10px;padding-left:20px; padding-right:30px;padding-bottom:10px;
+         font-size:20px;" *ngFor="let ts of category_tasks">
+            <label><span class="p-cursor check-circle" 
+               style="position:relative;top:4px;font-size:25px;color:gray;margin-right:10px">
+               <i class="bx bxs-check-circle"></i></span>{{ts.task}}</label>
+         </div>
+         </div>
+
+         <span><a href="/checklist">More...</a></span>
+      </div>
+      </div>
+   </div>
+
+   <div class="row justify-content-center">
+      <div class="col-12 col-lg-5 " >
+         <div class="span-tag">
+            <h3 class="hiw ibm text-center video-subtitle mb-3 mt-3">Need <i><span class="txt-blue">more help</span><br> 
+               moving to london?</i></h3>
+         <div>
+            <spna><img src="assets/images/whatsapp-call.png" style="max-width:60px;width:100%" alt="logo"></spna>
+            <span style="margin-left:25px">Book A Call with a local expert</span>
+            <span></span>
+         </div>
+         <br>
+         <div class="subscribe_btn justify-content-center d-flex align-items-center w-100 mr-below"><button
+            class="font-weight-bold free-signup-button" routerLink="/expatadvice">Book Call</button>
+          </div>
+         </div>
+
+         <div class="span-tag">
+            <h3 class="hiw ibm text-center video-subtitle mb-3 mt-3">Share your<i><span class="txt-blue">feedback</span></i></h3>
+            
+               <h5>Enjoying Matutto? Or not enjoying?<br>
+                  Either way let us know!</h5>
+                  <h5 style="font-weight:bold">Submit your feedback today and <span style="color:#5CAD5C">get 1 month free of the mover package </span>(worth £99)</h5>
+                  <br>
+                  
+         <div class="subscribe_btn justify-content-center d-flex align-items-center w-100 mr-below"><a href="https://forms.gle/ffms5tqcdM2YcQ3RA" target="_blank"><button
+            class="font-weight-bold free-signup-button" >Submit Feedback</button></a>
+            </div>
+         </div>
+            
+
+      </div>
+    <div class="col-12 col-lg-5">
+      <div class="span-tag" style="height:660px;">
+         <h3 class="hiw ibm text-center video-subtitle mb-3 mt-3">Matutto <i><span class="txt-blue">news</span></i></h3>
+               
+            <h4 style="font-weight:bold">
+               Thanks for trusting us with your move to London.  
+            </h4>
+            <h5>
+               At Matutto, we believe that everyone deserves  to move abroad smoothly and stress-free without spending a fortune! 
+            </h5>
+            <span><img src="assets/images/news-img-1.png" style="max-width:300px; width:100%" alt="logo"></span>
+            <h5 style="font-weight: bold;">If you have any questions you can reach out to us on admin@matutto.com</h5>
+
+      </div>
+      </div>
+   </div>
+
+</div>
+
+<br>

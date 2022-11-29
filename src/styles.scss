@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import './assets/scss/style';
+*{
+    min-height: 0;
+    min-width: 0;
+    }
+@font-face {
+    font-family:Playlist-Script;
+   
+        
+    
+    src: url(assets/fonts/FontsFree-Net-PlaylistScript.ttf);
+}
+@font-face {
+   
+        font-family: IBMPlexSans-Regular;
+        src:url(assets/fonts/IBMPlexSans-Regular.ttf);
+    
+}
+
+@font-face{
+    font-family: TTInterfaces;
+    src:url(assets/fonts/TTInterfaces.ttf);
+  }
+.playlist-script{
+    font-family:Playlist-Script;
+
+}
+
+.libre{
+font-family:IBMPlexSans-Regular;
+}
+
+
+.ibm{
+    // font-family: 'Dancing Script', cursive;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
+}
+.tt{
+    font-family: TTInterfaces;
+
+}

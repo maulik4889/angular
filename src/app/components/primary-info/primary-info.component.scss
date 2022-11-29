@@ -1,0 +1,155 @@
+
+.form-group  label {
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+ }
+
+ #upload-photo {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+ }
+ .profile1-wrap .form-group .edit-badge {
+    right: 5px;
+}
+.profile1-wrap .form-group .upload-link:hover {
+    color: #ff5700;
+}
+
+
+
+
+    
+
+.input_container {
+ display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin: 20px 0;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 130px !important;
+}
+
+/* Hide the browser's default checkbox */
+.input_container input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 45px;
+  width: 145px;
+  padding: 8px 10px;
+  border:1px solid #bdbdbde5;
+    border-radius: 4px;
+   color: #848080;
+   background-color: #ffff;
+}
+.checkmarkActive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 45px;
+  width: 145px;
+  padding: 8px 10px;
+  border:1px solid #bdbdbde5;
+    border-radius: 4px;
+    background-color: #FEAA31;
+    color: #ffff;
+}
+
+/* On mouse-over, add background color */
+.input_container:hover input ~ .checkmark {
+  // background: linear-gradient(to right, #ff4b00 0, #ffac00 100%);
+  background-color: #FEAA31;
+  color: #ffff;
+}
+
+/* When the checkbox is checked, add  background color*/
+.input_container input:checked ~ .checkmark {
+  // background: linear-gradient(to right, #ff4b00 0, #ffac00 100%);
+  background-color: #FEAA31;
+  color: #ffff;
+}
+
+
+
+  .button-align{
+    display: inline-block;
+  }
+  .button-mrgn{
+      margin-top:11px;
+      margin-left:7%
+  }
+  .check-margin{
+     
+    margin-left:20px;
+  }
+  .margin-g{
+    margin-right:30px;
+  }
+  .form-check1 {
+    position: relative;
+    display: block;
+    // padding-left: 1.25rem;
+}
+    .btn_default1 {
+        min-width: 175px;
+        min-height: 60px;
+         line-height: 15px;
+        padding: 0px 25px;
+        border-radius: 4px;
+        border:#848080;
+        /* border: 1px solid #FF5700; */
+        font-size: 20px;
+        color: #fff;
+       // display: inline-block;
+        text-align: center;
+        text-transform: capitalize;
+        font-weight: 400;
+        transition: 0.8s;
+    }
+
+    .btn_default2 {
+      min-width: 75px;
+      min-height: 30px;
+       line-height: 15px;
+      padding: 0px 25px;
+      border-radius: 4px;
+      border:#848080;
+      /* border: 1px solid #FF5700; */
+      font-size: 20px;
+      color: #fff;
+     // display: inline-block;
+      text-align: center;
+      text-transform: capitalize;
+      font-weight: 400;
+      transition: 0.8s;
+  }
+
+  @media screen and  (max-width:500px) {
+    .input_container2{
+      margin-top: 30px !important;
+    }
+  }
+
+  .obj-fit{
+  object-fit:cover;
+}
+
+.theme-green .bs-datepicker-body table td.week span {
+  color: #5cb85c;
+  display:none;
+}

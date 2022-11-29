@@ -1,0 +1,27 @@
+.edit_btn button {
+  background-color: #fda832;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 5px 35px;
+  margin-left:20px;
+  font-weight:bold;
+  border-radius: 30px;
+  font-size:22px;
+  &:hover {
+    background: transparent;
+    color: black;
+    border:1px solid orange;
+  }
+}
+
+.checklist-heading{
+  background-color: #ffa400;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+  padding: 5px 20px;
+  width: fit-content;
+  font-size: 22px;
+  font-weight: 600;
+}

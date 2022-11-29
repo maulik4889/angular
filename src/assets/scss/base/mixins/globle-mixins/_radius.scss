@@ -1,0 +1,93 @@
+$prefixes: -webkit-,
+-moz-,
+-o-,
+"";
+@mixin radius($size...) {
+    @if length($size)==1 {
+        @each $prefix in $prefixes {
+            #{$prefix}border-radius: $size;
+        }
+    }
+    @else {
+        @include customradius($size...);
+    }
+}
+
+@mixin customradius($topLeft: 0, $topRight: 0, $bottomRight: 0, $bottomLeft: 0) {
+    @each $prefix in $prefixes {
+        @if $prefix=="-moz-" {
+            @if $topLeft !=0 {
+                -moz-border-radius-topleft: $topLeft;
+            }
+            @if $topRight !=0 {
+                -moz-border-radius-topright: $topRight;
+            }
+            @if $bottomRight !=0 {
+                -moz-border-radius-bottomright: $bottomRight;
+            }
+            @if $bottomLeft !=0 {
+                -moz-border-radius-bottomleft: $bottomLeft;
+            }
+        }
+        @else {
+            @if $topLeft !=0 {
+                #{$prefix}border-top-left-radius: $topLeft;
+            }
+            @if $topRight !=0 {
+                #{$prefix}border-top-right-radius: $topRight;
+            }
+            @if $bottomRight !=0 {
+                #{$prefix}border-bottom-right-radius: $bottomRight;
+            }
+            @if $bottomLeft !=0 {
+                #{$prefix}border-bottom-left-radius: $bottomLeft;
+            }
+        }
+    }
+}
+
+@mixin imgFit($value1, $value2, $value3, $value4) {
+    min-height: $value1;
+    max-width: $value2;
+    min-width: $value3;
+    object-fit: $value4;  
+}
+@mixin imgOuter($value1, $value2) {
+    overflow: $value1;
+    border-radius: $value2;
+}
+@mixin color-weight($value1, $value2) {
+    color: $value1;
+    font-weight: $value2;
+}
+@mixin text-style($value1, $value2, $value3) {
+    font-size: $value1;
+    color: $value2;
+    font-weight: $value3;
+}
+
+@mixin textOverflow($value1, $value2, $value3) {
+    overflow: $value1;
+    white-space: $value2;
+    text-overflow: $value3;
+}
+@mixin inputWdt($value1, $value2, $value3) {
+    min-width: $value1;
+    min-height: $value2;
+    line-height: $value3; 
+}
+@mixin input-placeholder($color){
+    ::-webkit-input-placeholder {
+        color: $color;
+    }
+    :-moz-placeholder {
+        color: $color;
+    }
+    ::-moz-placeholder {
+        color: $color;
+    }
+    :-ms-input-placeholder {
+        color: $color;
+    }
+}
+

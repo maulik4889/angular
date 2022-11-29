@@ -1,0 +1,50 @@
+// THEME AND COLOR
+
+$black            : #000000 !default;
+$black-11         : #111111 !default;
+$black-72         : #727272 !default;
+$light-black      : #404041 !default;
+$white            : #ffffff !default;
+$theme-default    : #FF5700 !default;
+$gray             : #D8D8D8 !default;
+$light-grey       : #F7F7F7 !default;
+$light-green      : #00C351 !default;
+$success          : rgb(60, 63, 61) !default;
+$blue-1           : #0f3444 !default;    
+
+// PATH & FONT NAME
+$font          : 'Calibri' !default;
+$roboto        : 'Calibri' !default; 
+$imgpath       : "/assets/images/" !default;
+$font-path     : "/assets/fonts" !default;
+$icon-font-path: "/assets/fonts/icons" !default;
+$url           : $imgpath !default;
+$fontnormal    : 14px !default;
+$fontsmall     : 12px !default;
+$lineheight    : 1.7 !default;
+$lh            : normal !default;
+$iconmoon      : 'icomoon' !default;
+$spacing       : 5px !default;
+
+// Display
+$in            : inline !default;
+$ib            : inline-block !default;
+$b             : block !default;
+$t             : table !default;
+$cell          : table-cell !default;
+$n             : none !default;
+ 
+//TRANSITION EFFECT
+$trasition_all : all 300ms ease-in-out !default;
+ 
+// Margin
+$a             : auto !default;
+$auto          : auto auto !default;
+$za            : 0 auto !default;
+$up            : uppercase !default;
+$va            : middle !default;
+$wdt           : 100% !default;
+$bs            : none !default;
+$ol            : none !default;
+$cp            : pointer !default;
+$cr            : center !default;

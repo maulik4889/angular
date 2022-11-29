@@ -1,0 +1,270 @@
+._pages {
+   // padding: 70px 0;
+
+   &.login_page {
+       .create-content{
+         color: #404041;
+         font-size: 26px;
+         font-weight: 500;
+         margin-bottom: 26px;
+      }
+   //    img {
+   //       margin: 30px 0
+   //    }
+
+      form {
+         padding: 0 40px;
+
+         input {
+            background-color: transparent;
+         }
+
+         ._pass {
+            position: relative;
+
+            input {
+               padding-right: 65px;
+            }
+
+            span {
+               @include pos(a, 0 0 null null);
+               height: 100%;
+               line-height: 55px;
+               padding: 0 15px;
+               font-size: 14px;
+               cursor: pointer;
+            }
+         }
+         .signup-check{
+            margin: 15px 0;
+            label{
+               width: 100%;
+            }
+         }
+         .fr_pass {
+            a {
+               color: $theme-default;
+               cursor: pointer;
+               &:hover {
+                  text-decoration: underline;
+               }
+            }
+         }
+
+         ._facebook {
+            background-color: #4161A5;
+            border: 0;
+            position: relative;
+            font-weight: 400;
+
+            i {
+               @include pos(a, 18px null null 25px);
+               font-size: 25px;
+            }
+
+            &:hover {
+               background-color: #5279cc;
+            }
+         }
+
+         ._gmail {
+            background-color: #4285f4;
+        
+            border: 0;
+            position: relative;
+            font-weight: 400;
+
+            i {
+               @include pos(a, 18px null null 25px);
+               font-size: 25px;
+            }
+
+            &:hover {
+               background-color: #1669F2;
+            }
+         }
+
+         .tabs_signup {
+            ul{
+               border: 1px solid  #ff4b00;
+               @include radius(4px);
+               overflow: hidden;
+               text-align: center;
+               margin-bottom: 30px;
+               li {
+                  width: 50%;
+                  margin-bottom: 0px;
+                  a{
+                     border: 0;
+                     color: $black;
+                     border-radius: 0;
+                     padding: 12px 0;
+                     &:hover{
+                      @include gradient-horizontal($start-color: #ff4b00, $end-color: #ffac00, $start-percent: 0%, $end-percent: 100%);
+                        color: $white;
+                     }
+                  }
+                  &.active{
+                     a{
+                        @include gradient-horizontal($start-color: #ff4b00, $end-color: #ffac00, $start-percent: 0%, $end-percent: 100%);                        color: $white;
+                     }
+                  }
+               }
+            }
+         }
+
+
+         .tabs_signup1 {
+            ul{
+               border: 1px solid  #ff4b00;
+               @include radius(4px);
+               overflow: hidden;
+               text-align: center;
+               margin-bottom: 30px;
+               li {
+                  width: 50%;
+                  margin-bottom: 0px;
+                  a{
+                     border: 0;
+                     color: $black;
+                     border-radius: 0;
+                     padding: 12px 0;
+                     &:hover{
+                      @include gradient-horizontal($start-color: #ff4b00, $end-color: #ffac00, $start-percent: 0%, $end-percent: 100%);
+                        color: $white;
+                     }
+                  }
+                 
+               }
+            }
+         }
+      }
+   }
+}
+
+.fgt_modal{
+   padding: 20px 30px 45px;
+   .modal-header{
+      border: 0;
+      .close {
+         background-color: $black;
+         opacity: 1;
+         text-shadow: none;
+         line-height: 0;
+         @include padding(0);
+         @include text-style (25px, $white, 300);
+         @include square (30px);
+         @include radius(50%);
+         position: absolute;
+         right: 30px;
+         top: 30px;
+
+         &:focus{
+            outline: none;
+            border:0;
+            box-shadow: 0;
+         }
+         span{
+           display:  block;
+           @include square (100%);
+           line-height: 30px;
+         }
+      }
+   }
+   ._ttls{
+      margin-bottom: 15px;
+      label{
+         font-size: 18px;
+      }
+      h4{
+         font-weight: 700;
+      }
+   }
+   p{
+      @include text-style(15px, $black-72, 400);
+   }
+   form{
+      margin-top:30px;
+      .bn-btn{
+         a{
+            cursor: pointer;
+            &:not([href]){
+               &:not([tabindex]){
+                  color: #fff;
+               }
+               &:hover{
+                  color: $theme-default;
+               }
+            }
+         }
+      }
+   }
+   &._reset_modal{
+      padding: 55px 30px;
+     
+      span,.modal-icon{
+         @include square (70px);
+         @include radius(50%);
+         @include text-style(35px, $white, 300);
+         background-color: $theme-default;
+         line-height: 70px;
+         display: block;
+      }
+      h3{
+         @include text-style(30px, $black-11, 700);
+         padding: 20px 0;
+      }
+      p{
+         @include text-style(18px, $black-72, 400);
+         padding: 0 35px;
+      }
+      .bn-btn{
+         margin-top: 40px;
+         a,button{
+            min-width: 230px;
+            min-height: 55px;
+            line-height: 54px;
+            font-weight: 600;
+         }
+      }
+   }
+   &.cancel_sch{
+      padding: 35px 60px 15px;
+      .modal-header{
+         @include pos(a, 25px 30px null null);
+      }
+      label{
+         text-align: left;
+         display: block;
+      }
+      input,select{
+         height: 60px;
+         background-color: transparent;
+      }
+      textarea{
+         background-color: transparent;
+         height: 125px;
+      }
+      .bn-btn{
+         margin: 40px 0 0;
+      }
+   }
+}
+.fgt_modal.show-rating span{
+   width: auto !important;
+   height: auto !important;
+   border-radius: 0 !important;
+   font-size: 25px !important;
+   line-height: 25px !important;
+   color: #FF5700 !important;
+   font-weight: 300;
+   background-color: #FF5700;
+   display: inline-block !important;
+ }
+ .schedule-cancel-wrap.fgt_modal._reset_modal.show-rating span {
+    background-color: transparent;
+}
+
+._gmail-img{
+   background-color: white;border-radius: 50%; margin: 15px 0px;float:left;
+}

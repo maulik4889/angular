@@ -1,0 +1,81 @@
+
+      
+   <div class="_pages login_page">
+    <!-- <div class="container"> -->
+        <div class="row align-items-center justify-content-center">
+            <div  class="col-lg-1">&nbsp;</div>
+            <div  class="col-sm-10 col-md-12 col-lg-5" style="overflow-y: scroll;height: 585px;">
+               <form [formGroup]="loginform" (ngSubmit)="loginformSubmit()"  class="width-80">
+                
+                            <h1 class="main-title mt-4 mb-3 ibm text-center subtitle" >Log in to Matutto</h1>
+
+         
+         
+                   <div class="bn-btn">
+                       <a class=" btn  btn_default _facebook w-100" href="javascript:void(0)"><i
+                             class="float-left fa fa-facebook"></i>Continue with Facebook</a>
+                    </div>
+                    <br>
+         
+                    <div class="bn-btn">
+                       <a class=" btn  btn_default  _gmail w-100" href="javascript:void(0)" ><img
+                             class="_gmail-img" 
+                             src="https://img.icons8.com/fluent/30/000000/google-logo.png" />Continue with Google</a>
+                    </div>
+                    <div class="_divider text-center  m-auto">
+                       <label>or</label>
+                    </div>
+                    <div class="form-group">
+                     <label for="inputAddress">Email Address</label>
+                     <input type="text" class="form-control" placeholder="example@gmail.com" formControlName="email"
+                        [(ngModel)]="email">
+                     <div *ngIf="(submitted || formInputs['email'].touched) && formInputs['email'].errors">
+                        <div *ngIf="formInputs['email'].errors['required']" [ngClass]="{'error': true}">Email is required.</div>
+                        <div *ngIf="formInputs['email'].errors['email']" [ngClass]="{'error': true}">Email is not valid.</div>
+                     </div>
+                  </div>
+                  <div class="form-group ">
+                     <label for="inputAddress">Password</label>
+                     <div class="_pass">
+                        <input type="{{showHidePass}}" class="form-control" placeholder="Password"
+                           formControlName="password" [(ngModel)]="password">
+                        <span (click)="PasswordShow()">{{passcontent}}</span>
+                     </div>
+                     <div *ngIf="(submitted || formInputs['password'].touched) && formInputs['password'].errors">
+                        <div *ngIf="formInputs['password'].errors['required']" [ngClass]="{'error': true}">Password is required.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-group ">
+   
+                     <span class="float-right fr_pass mb-3"><a routerLink="/forgotpassword" >Forgot Password?</a></span>
+                  </div>
+                 
+                  
+                   <div class="bn-btn">
+                      <button class=" btn  btn_default theme w-100">Log in</button>
+         
+                   </div>
+
+                 
+             
+                   <p class="sc-iBYQkv kpTXSA text-center mb-4 mt-4">New to Matutto? Create an account <a class="font-weight-600 teal-text" href="/signup">Sign Up</a></p>
+                </form>
+             </div>
+             <div class="col-lg-1">&nbsp;</div>
+         
+             <div class="col-12 col-sm-12 col-md-12 col-lg-5 desktop-feed">
+               <!-- <div class="_ttls">
+                  <label>Welcome to Matutto</label>
+                  <h3>Please create your account</h3>
+               </div> -->
+               <img src="assets/images/signup-right.png" alt="login" class="image-right">
+            </div>
+          </div>
+     
+   
+    <!-- </div> -->
+ </div>
+ 
+ 
+ <!-- <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '5px' }"></ngx-loading> -->

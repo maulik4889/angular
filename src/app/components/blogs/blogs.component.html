@@ -1,0 +1,34 @@
+	<div class="container">
+
+		<h1 class="hiw ibm mt-4 mb-4"> Words from the <span style="color:#ffa400">Matutto</span> Team</h1>
+		<div class="row ">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-4 mb-5" *ngFor="let se of blogsData">
+			<img src="{{env.url}}/storage/category/{{se.image}}"  class="text-center p-cursor" routerLink="/blogs/{{se.url_title}}" style="width:100%">
+			<h3 class="font-weight-bold ibm mt-3">			{{se.title}}
+			</h3>		
+
+			<div [innerHtml]="se.description |slice:0:150" id="userMessagesWrap"></div>
+			<b class="p-cursor" routerLink="/blogs/{{se.url_title}}">Read more</b>
+			</div>
+			<!-- <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+				<img src="assets/images/meetingsabove.png">	
+
+			</div>
+
+			<div class="col-12 col-sm-12 col-md-12 col-lg-4">
+				<img src="assets/images/meetingsabove.png">	
+
+			</div> -->
+		</div>
+
+		<!-- <div class="common-pagination text-right pt-2">
+
+			<pagination-controls *ngIf="limit < total" (pageChange)="getBlogs($event)">
+			</pagination-controls>
+		 </div> -->
+	</div>
+
+
+
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '5px' }">Please do not refresh or close browser.this is
+	taking some time</ngx-loading>

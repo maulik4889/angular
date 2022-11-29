@@ -1,0 +1,621 @@
+<section class="mt-5">
+  <div class="container">
+    <!-- Main title -->
+    <h1 class="main-title fw-bolder ibm text-center moving-guide-title  mt-3">Managing <span style="color:#03989e">Your
+        Move</span> To London </h1>
+    <p class="libre text-center mb-4 expats-p" >Made for expats. Built by expats.</p>
+
+    <p class="para-side text-center mb-5">We make moving to London <b><i>actually</i></b> simple. All your need to know
+      and do and how to get it done! </p>
+    <div class="row justify-content-center">
+      <div class="col-6 col-lg-2 mb-4">
+
+        <div class="p-cursor" style="border:3px solid black;border-radius:30px;padding:20px 30px 0px 30px;" (click)="toHousing()">
+          <img src="assets/images/housing-big.png" class=" text-center w-100 LDN-Housing">
+          <p class="mb-0 mt-1 text-center fw-bold">HOUSING</p>
+          <p class=" text-center fw-bold mb-2" style="line-height:0.5">&nbsp;</p>
+
+        </div>
+
+
+
+      </div>
+      <div class="col-6 col-lg-2 mb-4">
+        <div style="border:3px solid black;border-radius:30px;padding:20px 30px 0px 30px;"  class="p-cursor" (click)="toBanking()">
+          <img src="assets/images/banking-big.png" class=" text-center w-100 LDN-Banking">
+          <p class="mb-0 mt-1 text-center fw-bold">BANKING</p>
+          <p class=" text-center fw-bold mb-2" style="line-height:0.5" >&nbsp;</p>
+
+        </div>
+      </div>
+      <div class="col-6 col-lg-2 mb-4">
+        <div style="border:3px solid black;border-radius:30px;padding:20px 30px 0px 30px;" class="p-cursor" (click)="toNin()">
+          <img src="assets/images/nin-big.png" class=" text-center w-100 LDN-NIN">
+          <p class="mb-0 mt-1 text-center fw-bold" >NI NUMBER</p>
+          <p class=" text-center fw-bold mb-2" style="line-height:0.5" >&nbsp;</p>
+
+
+        </div>
+      </div>
+      <div class="col-6 col-lg-2 mb-4">
+        <div style="border:3px solid black;border-radius:30px;padding:20px 30px 0px 30px;" class="p-cursor" (click)="toChecklist()">
+          <img src="assets/images/checklist-big.png" class=" text-center w-100 LDN-Checklist">
+          <p class="mb-0 mt-1 text-center fw-bold">THE</p>
+          <p class=" text-center fw-bold mb-2" style="line-height:0.5">CHECKLIST</p>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <h1 class="main-title ibm text-center subtitle mb-4 mt-3"> Housing: <span
+      style="color:#03989e"><i>Renting</i></span> in London</h1>
+  <div class="container">
+
+    <p class="libre para-side text-center" >Renting in London can be difficult. As an expat, there are so
+      many things to figure out! But we‘ re here to help you. In this guide, you’ll find all our expats’ tips and tricks
+      on where to live in London, how to find housing and what you need to rent an apartment in London. </p>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-12 col-lg-3 mb-3">
+        <div class="_housing justify-content-center p-cursor d-flex align-items-center w-100 "><button
+            class=" Where-to-live" (click)="toNeighbours()">&nbsp;Where to live &nbsp;</button>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 mb-3">
+        <div class="_housing justify-content-center d-flex p-cursor align-items-center w-100 "><button
+            class=" How-to-find-housing" (click)="toHousing()">How to find housing</button>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 mb-3">
+        <div class="_housing justify-content-center d-flex p-cursor align-items-center w-100 "><button
+            class=" What-you-need-to-rent" (click)="toRent()">What you need to rent </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1 class="main-title ibm text-center subtitle  mt-4" id="toNeighbours"> Top voted <span
+      style="color:#03989e"><i>neighbourhoods</i></span> in London </h1>
+  <div class="">
+    <div class="row justify-content-center ">
+      <div class="col-1 col-lg-1">
+        <span (click)="previous()" class="p-cursor text-center"><i class="fa fa-arrow-left next-icon"></i></span>
+
+      </div>
+      <div class="col-10 col-lg-10">
+        <ngx-slick-carousel class="carousel " #slickModal="slick-carousel" [config]="slideConfig">
+          <div ngxSlickItem *ngFor="let slide of slides | slice:0:6 ;let i = index" class="slide">
+            <div class="digit-circle1"><span>{{i+1}}</span></div>
+
+            <div class="_sld-item text-center corousel-card" *ngIf="i!=4 && i!=5">
+
+              <div>
+                <img src="assets/images/{{slide.image}}" alt="" class="m-auto slide-img" style="width:80%">
+                <p class="libre">
+                  <b>{{slide.title}}</b><br>
+                  <span class="votes_count">{{slide.votes}} Votes </span><br><br>
+                  <b> Average Rentals</b><br>
+                  1-Bed: £{{slide.one_bed_price}}<br>
+                  3-Bed: £{{slide.three_bed_price}}
+                </p>
+              </div>
+
+              <!-- <ngx-picture
+      src="{{baseUrl}}/storage/user/{{slide.user.image}}"
+      alt="test"
+      class="m-auto slide-img"
+      [lazyLoad]="true"
+      #picture 
+    ></ngx-picture> -->
+
+
+
+
+              <!-- <h5 style="color: black" class="tt mt-2" routerLink="/host/{{slide.user.host_url}}">{{ slide.user.full_name }}</h5> -->
+
+              <!-- <p>{{ slide.date }}</p> -->
+            </div>
+            <div class="_sld-item text-center corousel-card" *ngIf="i==4 || i==5">
+
+              <div style="background-color:white;border-radius:30px;margin:20px;padding-top:10px;padding-bottom:10px">
+                <p class="ibm text-center fw-bolder" style="font-size:20px"><i>Join</i> <br> <span
+                    style="color:#fda832" > Matutto</span></p>
+
+                <!-- <h4 class="ibm text-center"><span style="color:white;text-shadow:2px 0 #03989e;">FOR</span>  <span style="color:#03989e"> FREE</span></h4> -->
+                <img src="assets/images/for-free-big.png" class="w-100 text-center">
+                <p class="ibm text-center fw-bolder" style="font-size:20px"><i>to see</i> <br> more</p>
+              </div>
+              <div class="subscribe_btn mb-4 mt-1 text-center  align-items-center "><button class=" btn_ signup"
+                  routerLink="/signup" style="padding:8px 45px">Signup</button>
+              </div>
+
+              <!-- <ngx-picture
+       src="{{baseUrl}}/storage/user/{{slide.user.image}}"
+       alt="test"
+       class="m-auto slide-img"
+       [lazyLoad]="true"
+       #picture 
+     ></ngx-picture> -->
+
+
+
+
+              <!-- <h5 style="color: black" class="tt mt-2" routerLink="/host/{{slide.user.host_url}}">{{ slide.user.full_name }}</h5> -->
+
+              <!-- <p>{{ slide.date }}</p> -->
+            </div>
+
+          </div>
+
+
+        </ngx-slick-carousel>
+      </div>
+      <div class="col-1 col-lg-1">
+        <span (click)="next()" class="p-cursor text-center"><i class="fa fa-arrow-right prev-icon"></i></span>
+
+      </div>
+    </div>
+
+
+    <!-- <div class="three-btn"><i class="fa fa-bars" aria-hidden="true"></i> Menu</div> -->
+
+
+    <p class="ms-5"><span class="info-icon">i</span>&nbsp;Data collected via polls & surveys to Matutto members. Ranking
+      is updated every week. <u><b class="p-cursor" routerLink="/signup">Sign Up to vote and see more.</b></u></p>
+
+
+  </div>
+  <h3 class="main-title ibm text-center subtitle mb-3 mt-5" id="toHousing"> How to <span style="color:#03989e"><i>find
+        housing </i></span>in London
+  </h3>
+  <p class=" ms-5"> Search properties on the top websites: </p>
+  <div class="row justify-content-center">
+    <div class="col-1 col-lg-1">
+      <span (click)="previous1()" class="p-cursor text-center left-mobile"><i
+          class="fa fa-arrow-left next-icon"></i></span>
+
+    </div>
+    <div class="col-10 col-lg-10">
+
+      <ngx-slick-carousel class="carousel " #slickModal1="slick-carousel" [config]="slideConfig1">
+        <div ngxSlickItem *ngFor="let slide of slides1 | slice:0:4 ;let i = index" class="slide">
+
+          <div class="_sld-item text-center corousel-card1" *ngIf="i!=2 && i!=3">
+
+            <div>
+              <p class="ibm mt-4">
+                <a href="{{slide.link}}" target="_blank" style="color:black"> <b>{{slide.title}}</b><br></a>
+              </p>
+              <a href="{{slide.link}}" target="_blank"><img src="{{slide.img1}}" alt="" class="slide-img img{{i+1}}">
+                <img src="{{slide.img2}}" alt="" class=" slide-img" style="width:80%;margin-left:10%">
+              </a>
+              <p class="libre mt-3">
+                <b><img src="assets/images/trophy.png" style="
+      width: 30px;
+      display: inline;
+  " *ngIf="slide.subtitle != ' '">&nbsp;{{slide.subtitle}}</b><br>
+
+              </p>
+            </div>
+
+            <!-- <ngx-picture
+    src="{{baseUrl}}/storage/user/{{slide.user.image}}"
+    alt="test"
+    class="m-auto slide-img"
+    [lazyLoad]="true"
+    #picture 
+  ></ngx-picture> -->
+
+
+
+
+            <!-- <h5 style="color: black" class="tt mt-2" routerLink="/host/{{slide.user.host_url}}">{{ slide.user.full_name }}</h5> -->
+
+            <!-- <p>{{ slide.date }}</p> -->
+          </div>
+          <div class="_sld-item text-center corousel-card1" *ngIf="i==2 || i==3">
+
+            <div style="background-color:white;border-radius:30px;margin:20px;padding-top:10px;padding-bottom:10px">
+              <p class="ibm text-center fw-bolder" style="font-size:20px"><i>Join</i> <span style="color:#fda832">
+                  Matutto</span></p>
+
+              <!-- <h4 class="ibm text-center"><span style="color:white;text-shadow:2px 0 #03989e;">FOR</span>  <span style="color:#03989e"> FREE</span></h4> -->
+              <img src="assets/images/for-free-big.png" class="w-100 text-center">
+              <p class="ibm text-center fw-bolder" style="font-size:20px"><i>to see</i> more</p>
+            </div>
+            <div class="subscribe_btn mb-4 mt-1 text-center  align-items-center "><button class=" btn_ signup"
+                routerLink="/signup" style="padding:8px 45px">Signup</button>
+            </div>
+
+            <!-- <ngx-picture
+     src="{{baseUrl}}/storage/user/{{slide.user.image}}"
+     alt="test"
+     class="m-auto slide-img"
+     [lazyLoad]="true"
+     #picture 
+   ></ngx-picture> -->
+
+
+
+
+            <!-- <h5 style="color: black" class="tt mt-2" routerLink="/host/{{slide.user.host_url}}">{{ slide.user.full_name }}</h5> -->
+
+            <!-- <p>{{ slide.date }}</p> -->
+          </div>
+
+
+        </div>
+      </ngx-slick-carousel>
+    </div>
+    <div class="col-1 col-lg-1">
+      <span (click)="next1()" class="p-cursor text-center right-mobile"><i
+          class="fa fa-arrow-right prev-icon"></i></span>
+
+    </div>
+  </div>
+  <p class="libre ms-5">alternatively, work with a real estate agent:</p>
+  <div class="mid-para _mid-bg pb-4">
+    <br>
+    <div class="digit-circle_p mt-2 ms-5  mr-5" style="background-color:#a7d6d9"><span>1</span></div>
+
+    <p class="libre ">
+
+      Choose the area where you want to rent
+    </p>
+
+    <div class="digit-circle_p mt-2 ms-5  mr-5" style="background-color:#5ce1e6"><span>2</span></div>
+
+    <p class=" libre ">
+      Search for “estate agents” in the area on Google Maps
+
+    </p>
+
+
+    <div class="digit-circle_p mt-2 ms-5 mr-5" style="background-color:#00c2cb"><span>3</span></div>
+
+    <p class="libre " style="padding:10px;border-radius:20px;background-color: white;width:60%">
+
+      Join Matutto for FREE to <b>learn <u>how to find housing</u> in London through estate agents</b> </p>
+
+    <div class="digit-circle_p mt-2 ms-5  mr-5" style="background-color:#03989e"><span>4</span></div>
+
+    <p class="libre " style="padding:10px;border-radius:20px;background-color: white;width:60%">
+
+      Join Matutto for FREE to <b>learn <u>what fees estate agents</u> are able to charge in London</b> </p>
+
+
+    <div class="subscribe_btn mb-5 mt-5 text-center  align-items-center "><button class=" btn_ signup"
+        routerLink="/signup" style="padding:8px 45px">Join for Free</button>
+    </div>
+  </div>
+
+  <h3 class="main-title ibm text-center subtitle  mt-5" id="toRent"> What you <span style="color:#03989e"><i>need to
+        rent </i></span> in London
+
+  </h3>
+  <div>
+    <div class="row justify-content-center">
+    <div class="col-1 col-lg-1">
+      <span (click)="previous2()" class="p-cursor text-center left-mobile"><i class="fa fa-arrow-left next-icon"></i></span>
+    
+    </div>
+    <div class="col-10 col-lg-10">
+    <ngx-slick-carousel class="carousel " #slickModal2="slick-carousel" [config]="slideConfig2">
+      <div ngxSlickItem *ngFor="let slide of slides2;let i = index" class="slide">
+        <div class="digit-circle1"><span>{{i+1}}</span></div>
+
+        <div class="_sld-item text-center corousel-card2" *ngIf="i==0 || i==1">
+
+          <div>
+            <br>
+
+            <p class="libre">
+              <b>{{slide.title}}</b>
+            </p><br>
+
+            <img src="{{slide.img}}" alt="" class="m-auto slide-img" style="width:30%">
+            <p class="libre mt-3">
+              {{slide. subtitle}}
+              <!-- <span *ngIf="i==2">&nbsp;<br><b>Deposit Cap by law:</b> {{slide. para2}}</span> -->
+
+              <span *ngIf="i==0"><br>&nbsp;<br> &nbsp;<br><b>Prove your right to rent <a class="RTR_txt"
+                    href="https://right-to-rent.service.gov.uk/rtr-prove/id-question" target="_blank">here</a></b>
+              </span><br>
+              <span *ngIf="i==0"><b>Read more about RTR <a class="RTR_txt"
+                    href=" https://www.gov.uk/prove-right-to-rent" target="_blank">here</a><br> &nbsp;<br>&nbsp;</b>
+              </span>
+              <br>
+            </p>
+          </div>
+
+        </div>
+        <div class="_sld-item text-center corousel-card2" *ngIf="i==2 || i==3">
+
+          <div
+            style="background-color:white;border-radius:30px;margin:50px 10px 40px 10px;padding-top:35px;padding-bottom:35px">
+            <p class="ibm text-center fw-bolder" style="font-size:20px"><i>Join</i> <span style="color:#fda832">
+                Matutto</span></p>
+
+            <!-- <h4 class="ibm text-center"><span style="color:white;text-shadow:2px 0 #03989e;">FOR</span>  <span style="color:#03989e"> FREE</span></h4> -->
+            <img src="assets/images/for-free-big.png" class="w-100 text-center">
+            <p class="ibm text-center fw-bolder" style="font-size:20px"><i>to learn <br>everything you <br>need to rent
+              </i> </p>
+            <div class="subscribe_btn mb-4 mt-1 text-center  align-items-center "><button class=" btn_ signup"
+                routerLink="/signup" style="padding:8px 45px">Signup</button>
+            </div>
+          </div>
+
+
+          <!-- <ngx-picture
+       src="{{baseUrl}}/storage/user/{{slide.user.image}}"
+       alt="test"
+       class="m-auto slide-img"
+       [lazyLoad]="true"
+       #picture 
+     ></ngx-picture> -->
+
+
+
+
+          <!-- <h5 style="color: black" class="tt mt-2" routerLink="/host/{{slide.user.host_url}}">{{ slide.user.full_name }}</h5> -->
+
+          <!-- <p>{{ slide.date }}</p> -->
+        </div>
+
+      </div>
+    </ngx-slick-carousel>
+    </div>
+<div class="col-1 col-lg-1">
+  <span (click)="next2()" class="p-cursor text-center right-mobile"><i class="fa fa-arrow-right prev-icon"></i></span>
+
+</div>
+</div>
+
+  </div>
+  <h1 class="main-title ibm text-center subtitle mb-3 mt-3" id="toBanking"> Banking: How to open a <span style="color:#03989e"><i>bank
+        account</i></span> in London</h1>
+
+  <div class="container">
+    <div class="row justify-content-center" style="width:90%;margin-left:5%">
+
+      <div style="background-color: #f1f1f1;border-radius:30px;padding-top: 10px;
+  padding-bottom: 1px;
+  padding-left: 20px;">
+
+
+        <div class="digit-circle_p mb-2 mr-5 banking_circle" ><span>1</span></div>
+
+        <p class="libre mt-2 ms-4">
+
+          Choose between a Commercial UK Bank or a Digital Bank </p>
+
+
+      </div>
+<!-- 
+      <div class="row justify-content-center mt-5">
+        <div class="col-12 col-lg-6 mb-5">
+          <div class="_housing justify-content-center p-cursor d-flex align-items-center w-100 "><button
+              class=" Where-to-live w-100" (click)="toNeighbours()" style="background-color:#000000;">&nbsp;Commercial
+              UK Bank &nbsp;</button>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 mb-5">
+          <div class="_housing justify-content-center d-flex p-cursor align-items-center w-100 "><button
+              class=" How-to-find-housing w-100" (click)="toHousing()"
+              style="background-color:white;color:black;border:2px solid black;">Digital Bank</button>
+          </div>
+        </div>
+
+      </div> -->
+
+
+      <div style="background-color: #f1f1f1;border-radius:30px;padding-top: 10px;margin-bottom:40px;
+  padding-bottom: 1px;
+  padding-left: 20px;margin-top:30px">
+
+
+        <div class="digit-circle_p mb-2 mr-5 banking_circle" ><span>2</span></div>
+
+        <p class="libre mt-2 ms-4">
+
+          Prepare Proof of Address <br>To open a Bank account in the UK, you need proof of address. Documents that can
+          be used as Proof of Address are:</p>
+        <div class="row justify-content-center">
+          <div class="col-10 col-lg-2 ">
+            <img src="assets/images/Bills.png" class=" w-75 text-center d-inline" style="margin-left:12.5%">
+            <p class="fw-bold mt-2 text-center ">UTILITY BILLS
+            </p>
+            <p class="text-center address-text" >with your Home address and your name
+            </p>
+
+          </div>
+          <div class="col-10 col-lg-1">
+
+            <h3 class="ms-3 ibm  " style="padding-top:40px">OR</h3>
+          </div>
+          <div class="col-10 col-lg-3">
+
+            <img src="assets/images/Tenancy.png" class="w-50 text-center  ms-5" >
+            <p class="fw-bold mt-2 text-center"> TENANCY AGREEMENT
+
+            </p>
+            <p class="text-center address-text" >with your Home address and your name
+            </p>
+          </div>
+          <div class="col-10 col-lg-1">
+
+            <h3 class="ibm  " style="padding-top:40px">OR</h3>
+          </div>
+          <div class="col-10 col-lg-3">
+            <div
+              style="background-color:white;border-radius:30px;padding-top:10px;padding-bottom:10px;margin-bottom:30px">
+              <p class="ibm text-center fw-bolder" style="font-size:20px"><i>Join</i> <span style="color:#fda832">
+                  Matutto</span></p>
+
+              <!-- <h4 class="ibm text-center"><span style="color:white;text-shadow:2px 0 #03989e;">FOR</span>  <span style="color:#03989e"> FREE</span></h4> -->
+              <img src="assets/images/for-free-big.png" class="w-100 text-center">
+              <p class="ibm text-center fw-bolder" style="font-size:20px"><i>to learn more about </i> <br> Proof of
+                Address </p>
+
+              <div class="subscribe_btn mb-4 mt-1 text-center  align-items-center "><button class="btn_ signup"
+                  routerLink="/signup" style="padding:8px 45px">Signup</button>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="background-color: #f1f1f1;border-radius:30px;padding-top: 10px;
+padding-bottom: 1px;
+padding-left: 20px;">
+
+
+        <div class="digit-circle_p mb-2 mr-5 banking_circle" ><span>3</span></div>
+
+        <p class="libre mt-2 ms-4">
+
+          Choose a bank <br><br>
+        </p>
+
+        <div class="row justify-content-center">
+          <div class="col-10 col-lg-3 mb-4">
+            <p class="fw-bold mt-2 text-center para-side" >BARCLAYS
+            </p>
+            <img src="assets/images/barclays.png" class=" text-center d-inline w-75 mt-3 mb-3" style="margin-left:12.5%">
+
+
+          </div>
+          <div class="col-10 col-lg-4 ">
+            <p class="fw-bold mt-2 text-center para-side"> SANTANDER
+
+            </p>
+            <img src="assets/images/santander.png" class=" text-center w-75" style="margin-left:12.5%">
+
+      
+          </div>
+
+          <div class="col-10 col-lg-3">
+            <div
+              style="background-color:white;border-radius:30px;padding-top:10px;padding-bottom:10px;margin-bottom:30px">
+              <p class="ibm text-center fw-bolder" style="font-size:20px"><i>Join </i> <span
+                  style="color:#fda832">Matutto</span></p>
+              <img src="assets/images/for-free-big.png" class="w-100 text-center">
+
+              <p class="ibm text-center fw-bolder" style="font-size:20px"><i>to discover all<br> London banks </i> <br>
+                Proof of Address </p>
+
+              <div class="subscribe_btn mb-4 mt-1 text-center  align-items-center "><button class=" btn_ signup"
+                  routerLink="/signup" style="padding:8px 45px">Signup</button>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <br>
+
+
+      <div
+        style="background-color:white;border:3px solid black;border-radius:30px;padding:30px;margin-bottom: 40px;margin-top:40px">
+
+
+        <div style="background-color:white;border-radius:30px;padding-top:10px;padding-bottom:10px;">
+          <p class="ibm text-center fw-bolder" style="font-size:24px"><i>Join </i> <span style="color:#fda832">
+              Matutto</span></p>
+          <img src="assets/images/for-free-big.png" class="w-50 text-center" style="margin-left:25%">
+
+          <p class="ibm text-center fw-bolder" style="font-size:20px"><i>to discover</i> all the most recommended
+            Digital Banks </p>
+          <div class="subscribe_btn mt-1 text-center  align-items-center "><button class=" btn_ signup"
+              routerLink="/signup" style="padding:8px 45px">Signup</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <h1 class="main-title ibm text-center subtitle mb-3 mt-3"  id="toNin"> NIN:Getting a <span style="color:#03989e"><i> National
+            Insurance Number</i></span> in London</h1>
+    </div>
+<div class="">
+
+    <div class="container">
+
+    <p class="libre fw-bold">
+      What is a National Insurance Number (NIN) ?
+    </p>
+    <p class="libre " style="padding:10px;border-radius:20px;background-color: #f1f1f1;">
+      Your NIN is a unique code that ensures your National Insurance Contributions and Tax are recorded against your
+      name.<br>
+      You need a NIN to get paid in the UK and receive payroll from your employer.
+
+
+    </p>
+    <p class="libre fw-bold">
+      What you need to apply for a National Insurance Number</p>
+  </div>
+    <div class="row justify-content-center">
+      <div class="col-6 col-lg-3">
+        <div style="border:3px solid black;border-radius:30px;padding-top:20px;padding-bottom:20px">
+          <p class="ibm text-center fw-bolder" style="font-size:20px"><i>Join </i> <span style="color:#fda832">
+              Matutto</span></p>
+
+          <!-- <h4 class="ibm text-center"><span style="color:white;text-shadow:2px 0 #03989e;">FOR</span>  <span style="color:#03989e"> FREE</span></h4> -->
+          <img src="assets/images/for-free-big.png" class="w-100 text-center">
+          <p class="ibm text-center fw-bolder" style="font-size:20px"><i>to learn more <br>about NIN </i> </p>
+          <div class="subscribe_btn mb-4 mt-1 text-center  align-items-center "><button class=" btn_ signup"
+              routerLink="/signup" style="padding:8px 45px">Signup</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-8 col-lg-3 desktop-feed">
+        <div style="border:3px solid black;border-radius:30px;padding-top:20px;padding-bottom:20px">
+          <p class="ibm text-center fw-bolder" style="font-size:20px"><i>Join</i> <span style="color:#fda832"> Matutto</span></p>
+
+          <!-- <h4 class="ibm text-center"><span style="color:white;text-shadow:2px 0 #03989e;">FOR</span>  <span style="color:#03989e"> FREE</span></h4> -->
+          <img src="assets/images/for-free-big.png" class="w-100 text-center">
+          <p class="ibm text-center fw-bolder" style="font-size:20px"><i>to learn more<br> about NIN </i> </p>
+          <div class="subscribe_btn mb-4 mt-1 text-center  align-items-center "><button class=" btn_ signup"
+              routerLink="/signup" style="padding:8px 45px">Signup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="libre fw-bold mt-2 mb-2">
+      How to apply for a National Insurance Number (NIN)
+    </p>
+
+    <p class="libre mb-4 " style="padding:10px;border-radius:20px;border:3px solid black">
+      Join Matutto for FREE to learn <u><b>how to apply a for National Insurance Number </b></u>in London
+
+
+    </p>
+
+    <div class="subscribe_btn mb-5 mt-5 text-center  align-items-center "><button class=" btn_ signup"
+        routerLink="/signup" style="padding:8px 45px">Join for Free</button>
+    </div>
+  </div>
+</div>
+
+<h3  class="main-title ibm text-center subtitle mb-3 mt-5"> Get the “Moving to London”  <span style="color:#03989e"><i> checklist</i></span>  
+
+
+
+</h3>
+
+<p class="libre text-center mb-5">
+  By signing up to the FREE plan on Matutto
+</p>
+<div  class="subscribe_btn justify-content-center d-flex align-items-center w-100"  routerLink="/signup"><button  class=" Get-The-Checklist" id="toChecklist">Get Checklist</button></div>
+<div class="row mb-5 justify-content-center">
+  <div class="col-8 col-lg-8">
+    <img src="assets/images/IMG_3680.png" style="width:100%">
+  </div>
+</div>
+</section>

@@ -1,0 +1,344 @@
+<!-- Education Information -->
+
+<div class="profile1-wrap personal-info" >
+
+
+			<div class="row justify-content-center " >
+				
+				<div class="col-10  col-md-5 col-lg-5 mt-5">
+					<form [formGroup]="profileSetup" (ngSubmit)="onSubmit()">
+
+						<div class="sec-title px-3 px-sm-5 px-md-5 mb-0">
+							<h4 class="mb-0 text-center">Welcome!</h4>
+
+							<p class="libre mb-0 text-center">Create your profile to start using Matutto</p>
+						</div>
+				
+														<div class="row">
+															
+												
+														<div class="col-12 col-md-12 col-lg-12 profile1-content" >
+															<div
+															class="d-flex align-items-center justify-content-center  browser_height">
+															<div class="form-group mb-0">
+																<label for="upload-photo">
+																	<div class="edit_prfile mb-2">
+																		<div class="image-wrap">
+																			<div class="h-100">
+																				<div *ngIf="showImage==false">
+					
+																					<img src="{{image}}" width="133" height="133"
+																						alt="upload image" class="rounded-circle">
+																				</div>
+																				<div *ngIf="showImage==true">
+																					<img  *ngFor="let url of urls" [src]="url" width="133"
+																						height="133" alt="upload image"
+																						class="rounded-circle">
+																				</div>
+																			</div>
+																		</div>
+																		<div
+																			class="edit-badge d-flex align-items-center justify-content-center">
+																			<div class="browser_btn img_edit">
+																				<i class="fas fa-camera fz-20 text-white"></i>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="editImg mt-2 text-center">
+																		<a class="upload-link fz-17">Upload Photo</a>
+																	</div>
+																</label>
+																<input type="file" name="photo" id="upload-photo"
+																	(change)="fileUpload($event)" />
+					
+															</div>
+					
+														</div>
+														</div>
+
+
+
+														
+														
+														
+															 <div class="col-12 col-md-12 col-lg-12 profile1-content">
+																<div class="form-group">
+																	<label for="dob">Date of birth<span
+																		style="font-size:16px;color:#ff8200;">*</span></label>
+																	<!-- [(ngModel)]="myDateValue"
+																	value="{{myDateValue|date:'dd-MM-yyyy'}}" -->
+																<!-- <input type="text" class="form-control p-cursor"
+																		formControlName="dob" bsDatepicker
+																		[(ngModel)]="myDateValue"
+																		value="{{myDateValue|date:'dd-MM-yyyy'}}"> -->
+																		<input type="text"
+																		class="form-control p-cursor"
+																		formControlName="dob" 
+																	
+																		#dp="bsDatepicker"
+																		bsDatepicker value="{{myDateValue |date:'dd-MM-yyyy'}}">
+																	<div *ngIf="submitted  && formField['dob'].errors">
+																		<div *ngIf="formField['dob'].errors['required']"
+																			class="text-left"
+																			[ngClass]="{'error': true}">Date of
+																			birth is
+																			required
+																		</div>
+																	</div>
+
+																</div>
+															</div> 
+															<!-- <div class="col-12 col-md-12 col-lg-12 profile1-content">
+																<div class="form-group">
+																	<label for="interest">Interests</label>
+
+																	<ng-multiselect-dropdown
+																		[ngModelOptions]="{standalone: true}"
+																		formControlName="interest"
+																		[data]="dropdownListInterest"
+																		[(ngModel)]="interestList"
+																		[settings]="dropdownSettingsInterest"
+																		(onSelect)="onItemSelectInterest($event)"
+																		(onSelectAll)="onSelectAllInterest($event)"
+																		(unSelectAll)="onSelectAllInterest($event)"
+																		(onDeSelectAll)="onDeSelectAllInterest($event)"
+																		(onDeSelect)="OnItemDeSelectInterest($event)"
+																		title="Setting your interests will allow you to find the most relevant content in our feeds">
+																	</ng-multiselect-dropdown>
+
+																	<div
+																		*ngIf="(submitted || formField.interest.touched) && formField.interest.errors">
+																		<div *ngIf="formField.interest.errors['required']"
+																			class="text-left"
+																			[ngClass]="{'error': true}">Interest
+																			is
+																			required
+																		</div>
+																	</div>
+																</div>
+															</div> -->
+															<!-- <div > -->
+
+														
+
+
+
+															<!-- <div class="col-12 col-md-12 col-lg-12 profile1-content">
+																<div class="form-group">
+																	<label for="inputAddress">Address<span
+																			class="light-grey-color ml-1"></span></label>
+
+
+																	<input class="form-control"
+																		formControlName="address"
+																		placeholder="#200 Baron Rue Apt. 802"
+																		ngx-google-places-autocomplete
+																		[options]='options' #placesRef="ngx-places"
+																		(onAddressChange)="handleAddressChange($event)" />
+
+
+																	<div *ngIf="submitted  && formField.address.errors">
+																		<div *ngIf="formField.address.errors['required']"
+																			class="text-left"
+																			[ngClass]="{'error': true}">Address
+																			is
+																			required
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md-12 col-lg-12 profile1-content">
+																<div class="form-group">
+																	<label for="inputAddress">Country<span
+																			class="light-grey-color ml-1"></span></label>
+
+																	<input type="text" class="form-control"
+																		placeholder="Country" formControlName="country">
+																	<div
+																		*ngIf="(submitted || formField.country.touched) && formField.country.errors">
+																		<div *ngIf="formField.country.errors['required']"
+																			class="text-left"
+																			[ngClass]="{'error': true}">Country
+																			is
+																			required
+																		</div>
+																	</div>
+																</div>
+															</div> -->
+														
+															<div class="col-12 col-md-12 col-lg-12 profile1-content"
+																>
+																
+																<div class="form-group select-group">
+
+																	<div class="form-group">
+																		<label for="inputAddress">Nationality<span
+																			style="font-size:16px;color:#ff8200;">*</span></label>
+																		<div class="_add">
+																			<!-- <select class="form-control" formControlName="city" >
+																				<option value="" disabled selected>Select City
+																				</option>
+										
+																				<option value="{{city['name']}}" *ngFor="let city of cities; let i = index">
+																					{{city['name']}}</option>
+										
+										
+																			</select> -->
+																			<input formControlName="nationality"
+																			class="form-control" type="text"
+																			placeholder="Nationality"
+																			>
+																			<div
+																			*ngIf="(submitted || formField['nationality'].touched) && formField['nationality'].errors">
+																			<div *ngIf="formField['nationality'].errors['required']"
+																				class="text-left"
+																				[ngClass]="{'error': true}">Nationality is
+																				required
+																			</div>
+																		</div>
+																		</div>
+																	
+
+																	
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-md-12 col-lg-12 profile1-content"
+															>
+															<div class="form-group">
+																<label for="inputAddress">Reason For Moving <span
+																	style="font-size:16px;color:#ff8200;">*</span></label>
+																<div class="_date">
+																	<select class="form-control"formControlName="moving_reason"
+																	>
+																		<option value="" disabled selected>Select Reason
+																		</option>
+																	
+																		<option value="For Study">For Study</option>
+																		<option value="For Work">For Work</option>
+																		<option value="To live somewhere new">To live somewhere new</option>
+																		
+																		<option value="To be with a loved one">To be with a loved one 
+																		</option>
+																		<option value="Prefer not to say">Prefer not to say 
+																		</option>
+																	</select>
+
+																	<div
+																	*ngIf="(submitted || formField['moving_reason'].touched) && formField['moving_reason'].errors">
+																	<div *ngIf="formField['moving_reason'].errors['required']"
+																		class="text-left"
+																		[ngClass]="{'error': true}">Moving reason is
+																		required
+																	</div>
+																</div>
+																	</div>
+																	</div>
+																	</div>
+
+
+
+																	<p class="libre " style="color:red">* required to proceed</p>
+															<div class="subscribe_btn justify-content-center d-flex align-items-center w-100 mr-below"><button
+																class="font-weight-bold free-signup-button" >Save</button>
+															  </div>
+															<!-- <div class="col-12 col-md-6 col-lg-6 profile1-content">
+																<div class="form-group">
+																	<label for="inputAddress">Postcode</label>
+
+																	<input type="text" class="form-control"
+																		placeholder="Postcode" [(ngModel)]="postalcode"
+																		value={{postalcode}} formControlName="postcode">
+																	<div
+																		*ngIf="(submitted || formField.postcode.touched) && formField.postcode.errors">
+																		<div *ngIf="formField.postcode.errors['required']"
+																			class="text-left"
+																			[ngClass]="{'error': true}">Postal
+																			code is
+																			required
+																		</div>
+																	</div>
+																</div>
+															</div> -->
+
+															<!-- <div class="col-sm-12 col-md-12 col-lg-12">
+																<div class="_map">
+																	<agm-map [latitude]="lat" [longitude]="lng"
+																		class="w-100">
+																		<agm-marker [latitude]="lat" [longitude]="lng"
+																			class="w-100"></agm-marker>
+																	</agm-map>
+																</div>
+															</div> -->
+															<!-- </div> -->
+														</div>
+														</form>
+													</div>
+
+							
+			
+			<!-- <h5 class="text-center" style="color:#ff8200;font-weight: bold;" *ngIf="flag== 0">Almost Done!</h5>
+			<p class="text-center" style="font-size:18px;color:#545454;" *ngIf="flag== 0">In order to Host your first
+				class, you’ll need to add some additional information.<br>
+
+				You can do this now or complete your profile later.</p> -->
+			
+
+				
+
+
+			<div class="col-12 col-sm-12 col-md-12 col-lg-5 desktop-feed">
+				<!-- <div class="_ttls">
+				   <label>Welcome to Matutto</label>
+				   <h3>Please create your account</h3>
+				</div> -->
+				<img src="assets/images/signup-right.png" alt="login" class="image-right">
+			 </div>
+			</div>
+
+			<!-- <div class="row search1" *ngIf="flag== 0">
+
+
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-3 mb-sm-4 mb-md-4 text-center">
+					<div class="bn-btn">
+						<button class="btn_default1 theme font-weight-bold button-align" type="submit">Explore Matutto
+							Now<br><span style="font-size:12px">(and finish profile later)</span></button>
+						<button class="btn btn_default theme font-weight-bold button-align button-mrgn" 
+							(click)="clickOnButton(1)">Finish Profile Now</button>
+					</div>
+				</div>
+				<!-- <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-sm-4 mb-md-4">
+
+			<div class="bn-btn">
+				<button *ngIf="interests.length==0" class="btn btn_default theme font-weight-bold">Finish Profile Now</button>
+				<button *ngIf="interests.length != 0" class="btn btn_default theme font-weight-bold">Save
+					Changes</button>
+			</div>
+			</div> -->
+			<!-- </div> --> 
+			<!-- <div class="row mobile-tab" *ngIf="flag== 0">
+
+
+				<div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-sm-4 mb-md-4 text-center">
+					
+						<button class="btn btn_default theme font-weight-bold button-align " 
+							(click)="clickOnButton(1)" style="min-width: 227px;
+							min-height: 62px;
+							font-size: 20px;">Finish Profile Now</button>
+				</div>
+				<div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-sm-4 mb-md-4 text-center">
+					<button class="btn_default1 theme font-weight-bold button-align" type="submit">Explore Matutto
+						Now<br><span style="font-size:12px">(and finish profile later)</span></button>
+				</div>
+				<!-- <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-sm-4 mb-md-4">
+
+			<div class="bn-btn">
+				<button *ngIf="interests.length==0" class="btn btn_default theme font-weight-bold">Finish Profile Now</button>
+				<button *ngIf="interests.length != 0" class="btn btn_default theme font-weight-bold">Save
+					Changes</button>
+			</div>
+			</div> -->
+			<!-- </div> --> 
+		</div>
+		<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '5px' }"></ngx-loading>
+

@@ -1,0 +1,55 @@
+<header id="header" [class.sticky]="scroll >= 0 && scroll > 10" class="100%">
+   
+   <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+         <a class="navbar-brand logo"  routerLink="/"><img src="assets/images/Icon-l.png" alt="logo"></a>    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div style="float:right;margin-left: 35%;" class="desktop-feed">
+            </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto topnav"  >
+                   
+               <li class="nav-item">
+                  <a class="nav-link the-london-guide" routerLink="/london-guide">The London Guide </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link pricing" routerLink="/pricing">Pricing </a>
+               </li>
+               <li class="nav-item" *ngIf="token==null">
+                <div class="subscribe_btn nav-link  "><button
+                   class="signup" routerLink="/signup">Sign Up</button>
+                 </div>
+             </li>
+             <li class="nav-item">
+                <div class="login_btn nav-link" *ngIf="token==null" ><button
+                   class="login" routerLink="/login">Log In</button>
+                 </div>
+             </li>
+             <li class="nav-item">
+               <div class="login_btn nav-link" *ngIf="token!=null" ><button
+                  class="login" routerLink="/dashboard">Your Account</button>
+                </div>
+            </li>
+               <!-- <li class="nav-item" >
+                  <a class="nav-link" (click)="close()" routerLinkActive="active" routerLink="/howitworks">How It Works
+                  </a>
+               </li>
+               <li class="nav-item" >
+                  <a class="nav-link"  (click)="close()" routerLink="/faq" routerLinkActive="active" >FAQs </a>
+               </li> -->
+               <!-- <li class="nav-item" >
+                  <a class="nav-link" routerLink="/plans" routerLinkActive="active" >Plans </a>
+               </li> -->
+               <!-- <li class="nav-item" >
+                  <a class="nav-link"  (click)="close()" routerLink="/contactus" routerLinkActive="active"> Contact us</a>
+               </li> -->
+            </ul>
+           
+          </div>
+       
+
+      </nav>
+  </div>
+</header>

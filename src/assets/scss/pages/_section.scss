@@ -1,0 +1,359 @@
+
+
+  
+
+// termscondition-wrap page style
+
+.termscondition-wrap {
+   .form-check.form-check-inline {
+      margin-top: 2px;
+   }
+   ._buttons{
+      margin-left: 2.5rem;
+      .btn_default{
+         min-width: 227px;
+         &.border-btn{
+            color:$black;
+            border: 1px solid $black;
+            transition: all 0.3s ease;
+            &:hover{
+               border:1px solid $theme-default;
+               color: $white;
+            }
+         }
+      }
+   }   
+}
+
+
+
+
+// about us page classes 
+.aboutus-wrap {
+   .welcome-sec-wrap {
+      padding-top: 55px;
+      padding-bottom: 55px;
+
+      .sec-heading-wrap{
+         margin-bottom: 55px;
+      }
+      .image-wrap{
+         // background-image: url('assets/images/Matutto_About Us.png'); 
+         // background-size: 100% 100%;
+         height: 500px;
+         box-shadow: 0 -30px 50px 0 #FFFFFF;
+
+         img{
+            width:100%;
+            height:100%;
+            object-fit: contain;
+         }
+
+         @include media-breakpoint-down(md) {
+            height:360px !important; 
+         }
+         @include media-breakpoint-down(sm) {
+            height:200px !important;
+         }
+      }  
+   }
+   .about-content-wrap{
+      padding-top: 55px;
+      padding-bottom: 55px;
+      .sec-title {
+         
+         span{
+            color: $theme-default;
+         }
+      }
+      
+   }
+   .acti-topic-card{
+      &.section-gap-lg{
+         padding-top: 85px;
+      }
+      .sec-heading-wrap{
+         padding: 80px 40px 45px;
+         position: relative;
+         height:100%;
+         &.yellow{
+            border: 1px solid #FFAC00;
+         }
+         &.blue{
+            border: 1px solid #0072FF;
+         }
+         &.red{
+            border: 1px solid $theme-default;
+         }
+         .sec-content p{
+            font-size: 14px;
+         }
+         .card-icon{
+            position: absolute;
+            top: -46px;
+            left: 0;
+            right: 0;
+         }
+      }
+   }
+}
+// contactus page classes
+.contactus-wrap._schedule{
+   margin-top:10px;
+    ._schedule-section:last-child {
+      margin-top: 0px;
+  }
+   ._schedule-section{
+      padding: 45px;
+      .sec-heading-wrap{
+         margin-bottom: 56px;
+      }
+      .form-group{
+         margin-bottom: 38px;
+      }
+   }
+   .bn-btn{
+      .btn_default.theme{
+         width: 227px;
+         height: 65px;
+      }
+   }
+}
+
+// setting page classess 
+
+.setting-wrap._schedule{
+   
+   ._schedule-section{
+      &:last-child {
+         margin-top: 0px;
+     }
+      .form-content{
+         padding: 27px 40px;
+         .bn-btn .btn_default{
+            border-radius:8px;
+            font-weight: 500;
+         }
+      }
+      .form-heading-wrap{
+         border: 1px solid #EEEEEE;
+         padding: 26px 40px;
+         .s-title,.sidebar-title{
+            .title{
+               font-size: 25px;
+               color: #404041;
+               font-weight: 500;
+            }
+         }
+         .s-content .content{
+            font-size:18px; 
+            color: #727272;
+         }
+         
+      } 
+      .document-box-wrap{
+         height: 139px;
+         width: 100%;  
+         border: 1px solid #CCCCCC; 
+         border-style: dotted;
+         border-radius: 4px;
+         margin-bottom: 32px;
+      }
+      .s-content{
+         
+
+         .card{
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: none;
+         }
+      }     
+   }
+}   
+// radio button for setting tab start 
+.radio-container {
+   display: block;
+   position: relative;
+   padding-left: 35px;
+   margin-bottom: 12px;
+   cursor: pointer;
+   font-size: 22px;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+ }
+ 
+ .radio-container input {
+   position: absolute;
+   opacity: 0;
+   cursor: pointer;
+ }
+ 
+ 
+ .checkmark {
+   position: absolute;
+   top: 4px;
+   left: 0;
+   height: 16px;
+   width: 16px;
+   background-color: #eee;
+   border-radius: 50%;
+ }
+ 
+ 
+ .radio-container:hover input ~ .checkmark {
+   background-color: #dedede;
+ }
+ 
+ 
+ .radio-container input:checked ~ .checkmark {
+   background-color: #ff5d00;
+ }
+ 
+ 
+ .checkmark:after {
+   content: "";
+   position: absolute;
+   display: none;
+ }
+ 
+ 
+ .radio-container input:checked ~ .checkmark:after {
+   display: block;
+ }
+ 
+ 
+ .radio-container .checkmark:after {
+     top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+ }
+ .account-details h2 {
+   font-size: 22px;
+   margin-bottom: 20px;
+   color: #727272;
+}
+.account-details label {
+   font-size: 16px;
+   color: #727272;
+}
+.feedback-text textarea {
+   width: 100%;
+   height: 120px;
+   border: 1px solid #CCCCCC;
+   padding: 12px;
+}
+.feedback-text label {
+   margin-bottom: 10px;
+}
+// model 
+
+.fgt_modal._reset_modal.dash-modal,.fgt_modal.dash-modal{
+   padding-top: 28px;
+   .modal-title-wrap{
+      border-bottom: 1px solid #F2F2F2;
+      padding-left: 30px;
+      padding-right: 30px;
+   }
+   .modal-body{
+      padding: 20px 60px 60px 60px;
+   }
+   .custom-select{
+      width: 100%;
+      height: 66px;
+   }
+   .bn-btn{
+      .btn_default{
+         min-width: auto;
+         width: 230px
+      }
+   } 
+}
+.fgt_modal.dash-modal {
+   h3 {
+      font-size: 30px;
+      color: #111111;
+      font-weight: 700;
+      padding: 20px 0;
+   }
+   .btn-outline-primary{
+      border: 1px solid $theme-default;
+      color: $theme-default;
+      &:hover{
+         background-color: $theme-default;
+         color:$white;
+      }   
+   }
+   span{
+      color:$theme-default;
+   }   
+   .ngb-tp{
+      justify-content: center;
+      padding-right: 2rem;
+   }
+   &.cancel_sch .modal-header {
+      position: relative;
+      top: auto;
+      right: auto;
+   }
+}
+@media (max-width: 968px){
+   .fgt_modal._reset_modal.dash-modal,
+   .fgt_modal.dash-modal{
+      .bn-btn{
+         .btn_default{
+            width: 100%;
+         }
+      }   
+   }
+}
+
+
+
+
+
+
+// title area 
+.title_area{
+   .page_title h3{
+      color: $white;
+      margin:0;
+   }
+}
+
+
+.title_area.profile-area{
+   .nav-dashbord ul li a{
+      padding: 20px 40px;
+   }
+}
+
+ 
+
+
+
+.p-cursor{
+   cursor: pointer;
+}
+
+
+
+
+.mobile-tab{
+   display:none;
+   .nav a {
+      color: #808080;
+      &.active{
+         color:$theme-default;
+      }
+  }
+}
+
+
+
+
+ 

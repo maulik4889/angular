@@ -1,0 +1,239 @@
+
+.subscribe_btn button {
+  background-color: #fda832;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 11px 65px;
+  border-radius: 30px;
+  font-size:22px;
+}
+
+.free-choose-plan
+{
+  border:none; 
+  background:transparent;
+}
+.mover-choose-plan
+{
+  border:none; 
+  background:transparent;
+  color:white;
+}
+.premium-choose-plan
+{
+  border:none; 
+  background:transparent;
+}
+.cheaper-get-started-for-free 
+{
+  font-weight:bold;
+}
+.enterprises-email-us
+{
+  font-weight:bold; 
+}
+
+.cheaper {
+color: #fda832;
+}
+.expats-p{
+  font-size:25px;
+  
+@media (min-width: 320px) and (max-width:480px) {
+  font-size:20px;
+   }
+}
+
+.pricing {
+text-align: center;
+margin-bottom: 30px;
+position: relative;
+z-index: 9;
+background: #f1f1f1;
+padding:20px;
+border-radius:30px;
+
+}
+
+.package_name{
+color: #1d2896;
+font-weight: bold;
+font-size: 25px;
+}
+
+table.my-table td {
+  background-color: #f1f1f1;
+  border: solid 2px #FFFFFF;
+  border-style: none solid solid none;
+  padding: 10px;
+}
+
+table.my-table tr:first-child td:first-child { border-top-left-radius: 10px; }
+table.my-table tr:first-child td:last-child { border-top-right-radius: 10px; }
+
+table.my-table tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+table.my-table tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+
+table.my-table tr:first-child td { border-top-style: solid; }
+table.my-table tr td:first-child { border-left-style: solid; }
+​
+.txt-bold { font-weight:bold;}
+​
+
+​
+.div-tag {
+  max-width:700px; 
+  width:100%; 
+  margin:0px auto;
+}
+​
+.span-tag {
+  display: inline-block; 
+  text-align: center; 
+  font-size: 12px !important;
+}
+
+.pricing .price-header .title {
+margin: 0 0 10px;
+font-size: 20px;
+font-weight: 600;
+
+}
+
+.pricing .price-header .price {
+font-size: 35px;
+font-weight: 300;
+margin: 0;
+color: #37404d;
+}
+
+.pricing .content {
+padding: 20px 20px 30px;
+background: #f9f9f9;
+}
+
+.pricing .content ul {
+margin: 0 0 20px;
+}
+
+.pricing .content ul li {
+padding: 8px 0;
+font-size: 16px;
+color: #656565;
+}
+
+.pricing.featured .listing-badges {
+position: absolute;
+top: 0;
+z-index: 999;
+right: 0;
+width: 100%;
+display: block;
+font-size: 15px;
+padding: 0;
+overflow: hidden;
+height: 100px;
+}
+
+.pricing.featured .featured {
+float: left;
+transform: rotate(-45deg);
+left: -67px;
+top: 17px;
+position: relative;
+text-align: center;
+width: 200px;
+font-size: 19px;
+margin: 0;
+padding: 7px 10px;
+font-weight: 600;
+color: #fff;
+}
+.pricing.featured .featured {
+background: #00abab;
+}
+.btn-outline {
+border: solid 1px #00abab;
+color: #f0151f;
+}
+
+.btn-outline:hover {
+border: solid 1px #dc141d;
+background: #dc141d;
+color: #fff;
+}
+.button-theme {
+background: #f0151f;
+color: #FFF !important;
+}
+
+.button-theme:hover {
+background: #dc141d;
+color: #fff;
+}
+
+.pricing-btn {
+padding: 7px 25px 5px;
+border-radius: 2px;
+font-size: 14px;
+font-weight: 500;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+}
+
+
+table.my-table {
+    border:0px solid #FFFFFF;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin:0px auto;
+    max-width:700px !important;
+    width: 100%;
+    text-align: center;
+}
+
+table.my-table td {
+    background-color: #f1f1f1;
+    border: solid 2px #FFFFFF;
+    border-style: none solid solid none;
+    padding: 10px;
+  }
+  
+  table.my-table tr:first-child td:first-child { border-top-left-radius: 10px; }
+  table.my-table tr:first-child td:last-child { border-top-right-radius: 10px; }
+  
+  table.my-table tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+  table.my-table tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+  
+  table.my-table tr:first-child td { border-top-style: solid; }
+  table.my-table tr td:first-child { border-left-style: solid; }
+
+  .txt-bold { font-weight:bold;}
+
+  .btn-pricing{
+    background-color: #FFE9C9 !important;
+    border: none;
+    color: #242725 !important;
+    outline: none;
+    border-radius: 30px;
+    width: 95%;
+    height: 45px;
+    line-height: 45px;
+    font-size: 15px !important;
+    margin-bottom: 10px;
+    padding:0px !important;
+    font-weight: bold;
+  }
+
+  .div-tag {
+    max-width:700px; 
+    width:100%; 
+    margin:0px auto;
+  }
+
+  .span-tag {
+    display: inline-block; 
+    text-align: center; 
+    font-size: 12px !important;
+  }

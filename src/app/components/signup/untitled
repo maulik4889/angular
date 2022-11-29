@@ -1,0 +1,217 @@
+<div class="_pages login_page">
+   <!-- <div class="container"> -->
+      <img src="assets/images/Icon-l.png" class="py-3 icon" >
+      <br>
+      <div class="py-3" style="
+      width: 100%;
+      margin-top: 10px;
+      border-bottom: 2px solid lightgrey;
+  "></div>
+      <div class="row align-items-center">
+         
+         <div class="col-sm-12 col-md-12 col-lg-6 p-5">
+            <div class="_divider text-center  m-auto">
+               <label>or</label>
+               <span>You can also Sign in via these platforms</span>
+            </div>
+            <div class="bn-btn">
+               <a class=" btn  btn_default _facebook w-100" href="javascript:void(0)" (click)="signInWithFB()"><i
+                     class="float-left fa fa-facebook"></i>Sign up with Facebook</a>
+            </div>
+            <br>
+
+            <div class="bn-btn">
+               <a class=" btn  btn_default  _gmail w-100" href="javascript:void(0)" (click)="signInWithGoogle()"><img
+                     class="float-left" style="background-color: white;;border-radius: 50%; margin: 15px 0px"
+                     src="https://img.icons8.com/fluent/30/000000/google-logo.png" />Sign up with Google</a>
+            </div>
+            <form [formGroup]="signupForm" (ngSubmit)="signup()">
+
+
+               <div class="form-group">
+                  <label for="inputAddress">Email Address</label>
+                  <input type="text" class="form-control" placeholder="example@gmail.com" formControlName="email"
+                     [(ngModel)]="email">
+                  <div *ngIf="(submitted || formInputs.email.touched) && formInputs.email.errors">
+                     <div *ngIf="formInputs.email.errors.required" [ngClass]="{'error': true}">Email is required.
+                     </div>
+                     <div *ngIf="formInputs.email.errors.pattern" [ngClass]="{'error': true}">Email is not valid.
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group ">
+                  <label>Password</label>
+                  <div class="_pass">
+                     <input type={{showHidePass}} class="form-control" placeholder="Password" formControlName="password"
+                        [(ngModel)]="password">
+                     <span (click)="PasswordShow()">{{passcontent}}</span>
+                  </div>
+                  <div *ngIf="(submitted || formInputs.password.touched) && formInputs.password.errors">
+                     <div *ngIf="formInputs.password.errors.required" [ngClass]="{'error': true}">Password is
+                        required.</div>
+                     <div *ngIf="formInputs.password.errors.pattern" [ngClass]="{'error': true}">
+                        Password should be at least 8 characters long including one number, lowercase letters,
+                        uppercase letters and a special character.
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group ">
+                  <label>Confirm Password</label>
+                  <div class="_pass">
+                     <input type={{showHidePassCon}} class="form-control" placeholder="Password"
+                        formControlName="confirmPass" [(ngModel)]="confirmPass" >
+                     <span (click)="ConfPasswordShow()">{{confpasscontent}}</span>
+
+                  </div>
+                  <!-- <div *ngIf="(submitted || formInputs.confirmPass.touched) && formInputs.confirmPass.errors">
+                     <div *ngIf="formInputs.confirmPass.errors.required" [ngClass]="{'error': true}">Confirm
+                        password is required.</div>
+                  </div> -->
+                  <div *ngIf="submitted && ((password != '' && confirmPass != '') && password != confirmPass)"
+                     [ngClass]="{'error': true}">
+                     The password entered doesn't match the previous one                 </div>
+               </div>
+               <div class="form-group signup-check" style="margin-bottom:0px">
+              
+
+                  <label class="ch-checkbox pl-4 ">
+                     <input type="checkbox" formControlName="termandC" [(ngModel)]="termandC" >
+                     <span>
+
+                        <p style="
+                              font-size: 17px;">I Agree to the Website's <a routerLink="/termscondition"
+                              target="_block">Terms of Service</a>
+                           and <a routerLink="/privacypolicy" target="_block">Privacy Policy</a>. </p>
+                     </span>
+                     <div *ngIf="submitted && formInputs.termandC.errors">
+                        <div *ngIf="formInputs.termandC.errors.required" [ngClass]="{'error': true}">
+                           Please agree to Terms and Conditions and Privacy Policy.
+                        </div>
+                     </div>
+                  </label>
+                 
+               </div>
+               <div class="bn-btn">
+                  <button class=" btn  btn_default theme w-100">Sign up</button>
+
+               </div>
+              
+            </form>
+         </div>
+         <div class="col-12 col-sm-12 col-md-12 col-lg-6 desktop-feed">
+            <!-- <div class="_ttls">
+               <label>Welcome to Matutto</label>
+               <h3>Please create your account</h3>
+            </div> -->
+            <img src="assets/images/signup-right.png" alt="login" >
+         </div>
+      </div>
+   <!-- </div> -->
+</div>
+
+
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '5px' }"></ngx-loading>
+<div class="row align-items-center justify-content-center">
+   <div  class="col-lg-1">&nbsp;</div>
+   <div  class="col-sm-10 col-md-12 col-lg-5" style="overflow-y: scroll;height: 585px;">
+       <form [formGroup]="signupForm" (ngSubmit)="signup()" style="width:80%">
+          <h3 class="mt-2 mb-3 ibm text-center" style="text-shadow: 1.5px 0 black;
+          ">Join Matutto Today</h3>
+
+
+
+          <div class="bn-btn">
+              <a class=" btn  btn_default _facebook w-100" href="javascript:void(0)" (click)="signInWithFB()"><i
+                    class="float-left fa fa-facebook"></i>Continue with Facebook</a>
+           </div>
+           <br>
+
+           <div class="bn-btn">
+              <a class=" btn  btn_default  _gmail w-100" href="javascript:void(0)" (click)="signInWithGoogle()"><img
+                    class="float-left" style="background-color: white;;border-radius: 50%; margin: 15px 0px"
+                    src="https://img.icons8.com/fluent/30/000000/google-logo.png" />Continue with Google</a>
+           </div>
+           <div class="_divider text-center  m-auto">
+              <label>or</label>
+           </div>
+          <div class="form-group">
+             <label for="inputAddress">Email Address</label>
+             <input type="text" class="form-control" placeholder="example@gmail.com" formControlName="email"
+                [(ngModel)]="email">
+             <div *ngIf="(submitted || formInputs.email.touched) && formInputs.email.errors">
+                <div *ngIf="formInputs.email.errors.required" [ngClass]="{'error': true}">Email is required.
+                </div>
+                <div *ngIf="formInputs.email.errors.pattern" [ngClass]="{'error': true}">Email is not valid.
+                </div>
+             </div>
+          </div>
+          <div class="form-group ">
+             <label>Password</label>
+             <div class="_pass">
+                <input type={{showHidePass}} class="form-control" placeholder="Password" formControlName="password"
+                   [(ngModel)]="password">
+                <span (click)="PasswordShow()">{{passcontent}}</span>
+             </div>
+             <div *ngIf="(submitted || formInputs.password.touched) && formInputs.password.errors">
+                <div *ngIf="formInputs.password.errors.required" [ngClass]="{'error': true}">Password is
+                   required.</div>
+                <div *ngIf="formInputs.password.errors.pattern" [ngClass]="{'error': true}">
+                   Password should be at least 8 characters long including one number, lowercase letters,
+                   uppercase letters and a special character.
+                </div>
+             </div>
+          </div>
+          <div class="form-group ">
+             <label>Confirm Password</label>
+             <div class="_pass">
+                <input type={{showHidePassCon}} class="form-control" placeholder="Password"
+                   formControlName="confirmPass" [(ngModel)]="confirmPass" >
+                <span (click)="ConfPasswordShow()">{{confpasscontent}}</span>
+
+             </div>
+             <!-- <div *ngIf="(submitted || formInputs.confirmPass.touched) && formInputs.confirmPass.errors">
+                <div *ngIf="formInputs.confirmPass.errors.required" [ngClass]="{'error': true}">Confirm
+                   password is required.</div>
+             </div> -->
+             <div *ngIf="submitted && ((password != '' && confirmPass != '') && password != confirmPass)"
+                [ngClass]="{'error': true}">
+                The password entered doesn't match the previous one                 </div>
+          </div>
+          <div class="form-group signup-check" style="margin-bottom:0px">
+            
+
+             <label class="ch-checkbox pl-4 ">
+                <input type="checkbox" formControlName="termandC" [(ngModel)]="termandC" >
+                <span>
+
+                   <p style="
+                         font-size: 17px;">I Agree to the Website's <a routerLink="/termscondition"
+                         target="_block">Terms of Service</a>
+                      and <a routerLink="/privacypolicy" target="_block">Privacy Policy</a>. </p>
+                </span>
+                <div *ngIf="submitted && formInputs.termandC.errors">
+                   <div *ngIf="formInputs.termandC.errors.required" [ngClass]="{'error': true}">
+                      Please agree to Terms and Conditions and Privacy Policy.
+                   </div>
+                </div>
+             </label>
+            
+          </div>
+          <div class="bn-btn">
+             <button class=" btn  btn_default theme w-100">Sign up</button>
+
+          </div>
+    
+         
+       </form>
+    </div>
+    <div class="col-lg-1">&nbsp;</div>
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-5">
+      <!-- <div class="_ttls">
+         <label>Welcome to Matutto</label>
+         <h3>Please create your account</h3>
+      </div> -->
+      <img src="assets/images/signup-right.png" alt="login" class="imagee">
+   </div>
+ </div>

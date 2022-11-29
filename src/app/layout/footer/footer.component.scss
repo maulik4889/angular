@@ -1,0 +1,18 @@
+.footer-end{
+  background-color: black;color:white;padding:50px
+}
+
+.footer-titles{
+  font-size:16px;
+  @media (min-width: 2001px) and (max-width:3200px) {
+    font-size:20px;   
+      }
+    }
+
+    .footer-sub-titles{
+      font-size:18px;
+      font-weight:bold;
+      @media (min-width: 2001px) and (max-width:3200px) {
+        font-size:26px;   
+          }
+        }

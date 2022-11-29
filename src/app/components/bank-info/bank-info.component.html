@@ -1,0 +1,167 @@
+<div class="_pages bankinfo_page">
+   
+   <div class="row justify-content">
+   
+      <h3 class="ibm" style="text-align:left !important; margin-left: 20px;">Opening a bank account in UK</h3>
+
+      <div class="col-12">
+            <div class="span-tag" style="float:left !important;height:auto; ">
+               <h3 class="hiw ibm text-center video-subtitle mb-3 mt-3" style="margin-left:20px; text-align:left !important">
+                  <div class="circle">1</div>
+                  <span style="font-size: large;">Do you have a UK address yet?</span></h3>
+               <div class="row raw-padding" >
+                  <div class="col-lg-2" style="padding-bottom: 5px;">
+                     <div class="subscribe_btn justify-content-center d-flex w-100 ">
+                        <button class="font-weight-bold free-signup-button" [ngClass]=" tab1==true ? 'active' : ''" (click)="onclickYes()" type="button" >Yes</button>
+                   </div>
+                  </div>
+                  <div class="col-lg-2" style="">
+                     <div class="subscribe_btn justify-content-center d-flex w-100">
+                     <button class="font-weight-bold free-signup-button" (click)="onclickNo()" type="button" >No</button>
+                </div>
+               </div>
+               </div>
+            </div> 
+            <br>
+      </div>
+
+      <ng-container *ngIf="tab1==true">
+      <div class="col-12" >
+         <div class="span-tag" style="float:left !important;height:auto;">
+            <h3 class="hiw ibm text-center video-subtitle mb-3 mt-3" style="margin-left:20px; text-align:left !important">
+            <div class="circle">2</div>
+            <span  style="font-size: large;">Prepare Proof of Address</span></h3>
+            <h5 class="hiw ibm text-center video-subtitle mb-3 mt-3" style="margin-left:20px; text-align:left !important">
+               <span style="font-size: 16px;">To open a Bank account in the UK, you need proof of address. Documents that can be used as Proof of Address are:</span>
+            </h5>
+            <br>
+            <div class="row justify-content-center">
+                  <div class="col-3 justify-content-center">
+                     <span><img src="assets/images/UTILITY BILLS.png" style="max-width:100px; width:100%;margin-bottom:10px;" alt="logo">
+                        <h3 style="font-weight: bold;margin-top:10px;font-size:20px;">UTILITY BILLS</h3>
+                        <h5 style="margin-bottom:10px;">with your Home address <br>and your name</h5>
+                     </span>
+                  </div>
+                  <div class="col-3">
+                     <span><img src="assets/images/TENANCY AGREEMENT.png" style="max-width:100px; width:100%;margin-bottom:10px;" alt="logo">
+                        <h3 style="font-weight: bold;margin-top:10px;font-size:20px;">TENANCY AGREEMENT </h3>
+                        <h5 style="margin-bottom:10px;">with your Home address <br>and your name </h5>
+                     </span>
+                  </div>
+               
+                  <div class="col-3">
+                     <span><img src="assets/images/HMRC LETTER.png" style="max-width:100px; width:100%;margin-bottom:10px;" alt="logo">
+                        <h3 style="font-weight: bold;margin-top:10px;font-size:20px;">HMRC LETTER</h3>
+                        <h5 style="margin-bottom:10px;">with your Home address <br>and your name </h5>
+                     </span>
+                  </div>
+                  <div class="col-3">
+                     <span><img src="assets/images/OTHERS.png" style="max-width:100px; width:100%;margin-bottom:10px;" alt="logo">
+                        <h3 style="font-weight: bold;margin-top:10px;font-size:20px;">OTHERS</h3>
+                        <h5 style="margin-bottom:10px;">Ask the bank what other <br>documents they accept </h5>
+                     </span>
+                  </div>
+            </div>
+         </div>     
+   </div>
+
+   <div class="col-12" >
+      <div class="span-tag" style="float:left !important;height:auto;">
+         <h3 class="hiw ibm text-center video-subtitle mb-3 mt-3" style="margin-left:20px; text-align:left !important">
+         <div class="circle">3</div>
+         <span  style="font-size: large;">Choose a bank</span></h3>
+         <br> 
+         <div class="row justify-content-center">
+            
+            <div class="col-2">
+               <h3 style="margin-bottom:20px;font-weight:bold;font-size:20px;"><u>Barclays</u></h3>
+               <span><img src="assets/images/barclays.png" style="max-width:200px; width:100%" alt="logo"></span><br><br>
+            </div>
+            <div class="col-2">
+               <h3 style="margin-bottom:20px;font-weight:bold;font-size:20px;"><u>Santander</u></h3>
+               <span><img src="assets/images/santander.png" style="max-width:200px; width:100%" alt="logo"></span><br>
+            </div>
+            <div class="col-2">
+               <h3 style="margin-bottom:20px;font-weight:bold;font-size:20px;"><u>HSBC</u></h3>
+               <span><img src="assets/images/hsbc.jpeg" style="max-width:200px; width:100%" alt="logo"></span><br><br>
+            </div>
+            <div class="col-2">
+               <h3 style="margin-bottom:20px;font-weight:bold;font-size:20px;"><u>Lloyds</u></h3>
+               <span><img src="assets/images/lloydsbank.png" style="max-width:200px; width:100%" alt="logo"></span>
+            </div>
+            
+          </div>
+
+         <br>
+         <h5 class="hiw ibm text-center video-subtitle mb-3 mt-3" style="margin-left:20px; text-align:left !important">
+            <span  style="font-size: 16px;">Or a Digital Bank. These don’t require a UK Proof of Address:</span> 
+         </h5>
+         <br>
+         <div class="row justify-content-center">
+            <div class="col-2">
+               <h3 style="margin-bottom:20px;font-weight:bold;font-size:20px;"><u>Revolut</u></h3>
+               <span><img src="assets/images/Revolut.png" style="max-width:200px; width:100%" alt="logo"></span><br><br>
+            </div>
+            <div class="col-2">
+               <h3 style="margin-bottom:20px;font-weight:bold;font-size:20px;"><u>Monzo</u></h3>
+               <span><img src="assets/images/Monzo.png" style="max-width:200px; width:100%" alt="logo"></span><br>
+            </div>
+            <div class="col-2">
+               <h3 style="margin-bottom:20px;font-weight:bold;font-size:20px;"><u>Starling</u></h3>
+               <span><img src="assets/images/Starling.png" style="max-width:200px; width:100%" alt="logo"></span><br><br>
+            </div>
+            <div class="col-2">
+               <h3 style="margin-bottom:20px;font-weight:bold;font-size:20px;"><u>Monese</u></h3>
+               <span><img src="assets/images/Monese.png" style="max-width:200px; width:100%" alt="logo"></span><br><br>
+            </div>
+            <div class="col-2">
+               <h3 style="margin-bottom:20px;font-weight:bold;font-size:20px;"><u>Wise</u></h3>
+               <span><img src="assets/images/Wise.png" style="max-width:200px; width:100%" alt="logo"></span>
+            </div>
+      </div>
+      </div>    
+</div>
+
+</ng-container>
+
+<ng-container *ngIf="tab1==false && tab2==true">
+<div class="col-12" >
+   <div class="span-tag" style="float:left !important;height:auto;">
+      <h3 class="hiw ibm text-center video-subtitle mb-3 mt-3" style="margin-left:20px; text-align:left !important">
+         <div class="circle">2</div>
+         <span  style="font-size: large;">UK Banks require Proof of Address to open an account. Instead, you can open an account with a Digital Bank:</span></h3>
+      <br>
+      <div class="row justify-content-center">
+         <div class="col-2">
+            <h3 style="margin-bottom:20px;font-weight:bold;font-size:20px;"><u>Revolut</u></h3>
+            <span><img src="assets/images/Revolut.png" style="max-width:200px; width:100%" alt="logo"></span><br><br>
+         </div>
+         <div class="col-2">
+            <h3 style="margin-bottom:20px;font-weight:bold;font-size:20px;"><u>Monzo</u></h3>
+            <span><img src="assets/images/Monzo.png" style="max-width:200px; width:100%" alt="logo"></span><br>
+         </div>
+         <div class="col-2">
+            <h3 style="margin-bottom:20px;font-weight:bold;font-size:20px;"><u>Starling</u></h3>
+            <span><img src="assets/images/Starling.png" style="max-width:200px; width:100%" alt="logo"></span><br><br>
+         </div>
+         <div class="col-2">
+            <h3 style="margin-bottom:20px;font-weight:bold;font-size:20px;"><u>Monese</u></h3>
+            <span><img src="assets/images/Monese.png" style="max-width:200px; width:100%" alt="logo"></span><br><br>
+         </div>
+         <div class="col-2">
+            <h3 style="margin-bottom:20px;font-weight:bold;font-size:20px;"><u>Wise</u></h3>
+            <span><img src="assets/images/Wise.png" style="max-width:200px; width:100%" alt="logo"></span>
+         </div>
+   </div>
+   </div>
+</div> 
+</ng-container>
+
+
+   </div>
+</div>
+ 
+<br>
+
+
+

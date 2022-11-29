@@ -1,0 +1,101 @@
+
+       
+   <div class="_pages login_page">
+    <!-- <div class="container"> -->
+        <div class="row align-items-center justify-content-center">
+            <div  class="col-lg-1">&nbsp;</div>
+            <div  class="col-sm-10 col-md-12 col-lg-5" style="overflow-y: scroll;height: 585px;" *ngIf="signup_success==false">
+                <form [formGroup]="signupForm" (ngSubmit)="signup()" class="width-80">
+                   <h1 class="main-title mt-4 mb-3 ibm text-center subtitle" >Join Matutto Today</h1>
+   
+         
+                   <div class="bn-btn">
+                       <a class=" btn  btn_default _facebook w-100" href="javascript:void(0)" ><i
+                             class="float-left fa fa-facebook"></i>Continue with Facebook</a>
+                    </div>
+                    <br>
+         
+                    <div class="bn-btn">
+                       <a class=" btn  btn_default  _gmail w-100" href="javascript:void(0)"><img
+                             class="float-left" style="background-color: white;;border-radius: 50%; margin: 15px 0px"
+                             src="https://img.icons8.com/fluent/30/000000/google-logo.png" />Continue with Google</a>
+                    </div>
+                    <div class="_divider text-center  m-auto">
+                       <label>or</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Your Name</label>
+                        <input type="text" class="form-control" placeholder="First and last name" formControlName="name"
+                          >
+                        <div *ngIf="(submitted || formInputs['name'].touched) && formInputs['name'].errors">
+                           <div *ngIf="formInputs['name'].errors['required']" [ngClass]="{'error': true}">Name is required.
+                           </div>
+                     
+                        </div>
+                     </div>
+                   <div class="form-group">
+                      <label for="inputAddress">Email Address</label>
+                      <input type="text" class="form-control" placeholder="Your email address" formControlName="email"
+                         >
+                      <div *ngIf="(submitted || formInputs['email'].touched) && formInputs['email'].errors">
+                         <div *ngIf="formInputs['email'].errors['required']" [ngClass]="{'error': true}">Email is required.
+                         </div>
+                         <div *ngIf="formInputs['email'].errors['email']" [ngClass]="{'error': true}">Email is not valid.
+                         </div>
+                      </div>
+                   </div>
+                   <div class="form-group ">
+                      <label>Create a password</label>
+                      <div class="_pass">
+                         <input type={{showHidePass}} class="form-control" placeholder="Password" formControlName="password"
+                          >
+                         <span (click)="PasswordShow()">{{passcontent}}</span>
+                      </div>
+                      <div *ngIf="(submitted || formInputs['password'].touched) && formInputs['password'].errors">
+                         <div *ngIf="formInputs['password'].errors['required']" [ngClass]="{'error': true}">Password is
+                            required.</div>
+                         <div *ngIf="formInputs['password'].errors['pattern']" [ngClass]="{'error': true}">
+                            Password should be at least 8 characters long including one number, lowercase letters,
+                            uppercase letters and a special character.
+                         </div>
+                      </div>
+                   </div>
+                 
+                  
+                   <div class="bn-btn">
+                      <button class=" btn  btn_default theme w-100">Create my account</button>
+         
+                   </div>
+
+                   <p class="text-center mt-2 mb-2">By continuing, you agree to the <a  class="default-text" routerLink="/termscondition" target="_blank">Terms of use</a> and <a target="_blank" class="default-text" routerLink="/privacypolicy">Privacy Policy</a> of matutto.com</p>
+             
+                   <p class="sc-iBYQkv kpTXSA text-center mb-2">Already have an account? <a class="font-weight-600 teal-text" href="/login">Log in</a></p>
+                </form>
+             </div>
+             <div  class="col-sm-10 col-md-12 col-lg-5" *ngIf="signup_success==true">
+             <h3 class="ibm text-center"> Verify Your Email</h3>
+             <div class="text-center">
+<img src="assets/images/verify_email.png" >
+</div>
+             
+             <p  class="text-center"> To keep a trusted and safe community, <br>we've sent you an email for verification. <br><br>
+                Check your SPAM folder if you can't <br>locate the email in your inbox.
+            </p>
+            </div>
+             <div class="col-lg-1">&nbsp;</div>
+         
+             <div class="col-12 col-sm-12 col-md-12 col-lg-5 desktop-feed">
+               <!-- <div class="_ttls">
+                  <label>Welcome to Matutto</label>
+                  <h3>Please create your account</h3>
+               </div> -->
+               <img src="assets/images/signup-right.png" alt="login" class="image-right">
+            </div>
+          </div>
+     
+   
+    <!-- </div> -->
+ </div>
+ 
+ 
+ <!-- <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '5px' }"></ngx-loading> -->

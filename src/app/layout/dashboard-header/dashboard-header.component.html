@@ -1,0 +1,284 @@
+<!-- <header class="header" id="header">
+   <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+         <a class="navbar-brand logo" routerLink="/dashboard" ><img src="assets/images/Icon-l.png" alt="logo"></a>
+
+
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto topnav" *ngIf="this.router.url == '/home'">
+               <li class="nav-item active">
+                  <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" routerLink="/">About us</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" routerLink="/">Classes Available</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" routerLink="/"> Contact us</a>
+               </li>
+               <li class="nav-item">
+                  <a class=" btn   btn_default border-btn" routerLink="/signup">Sign up</a>
+               </li>
+               <li class="nav-item">
+                  <a class=" btn  btn_default theme" routerLink="/login">Login</a>
+               </li>
+            </ul>
+         </div>
+         <div class="ml-auto align-items-center  _header-log head_dashbord">
+            <ul class="_dashboard-header align-items-center">
+               <li>
+
+               </li>
+               <li class="notification-wrap">
+
+                  <div class="btn-group" dropdown>
+                     <button id="button-basic" dropdownToggle type="button"
+                        class="btn noti-btn dropdown-toggle p-0" aria-controls="dropdown-basic">
+                        <i class="icon-notification"></i>
+                        <span class="badge badge-pill badge-danger" *ngIf="unread_noti>0">0</span>
+                     </button>
+                     <ul id="dropdown-basic w-auto" *dropdownMenu class="dropdown-menu notification-dropdown"
+                        role="menu" aria-labelledby="button-basic">
+                        <li role="menuitem" *ngFor="let noti of notifications;let i= index">
+                       
+
+                         
+                       
+                         
+                        </li>
+                        <li class="menu-btn text-center" *ngIf="notifications.length>3">
+                           <a class="dropdown-item color-theme" >View All Notifications</a>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+               <li>
+                  <div class="btn-group" dropdown>
+                     <img class="ing1" src="{{image}}" alt="profile">
+                     <button id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle"
+                        aria-controls="dropdown-basic">
+                        <span class="user-name">{{name}}</span> <span class="caret"></span>
+                     </button>
+                     <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu"
+                        aria-labelledby="button-basic">
+                        <li><a class="dropdown-item text-capitalize"><img src="{{image}}" alt="profile" class="mr-2"> {{name}} </a></li>
+                        <li role="menuitem"><a class="dropdown-item" routerLink="/profile"><span
+                                 class="icon-profile"></span> Profile <i class="icon-Shape"></i></a></li>
+                        <li role="menuitem"><a class="dropdown-item" routerLink="/settings"><span
+                                 class="icon-setting"></span> Settings <i class="icon-Shape"></i></a></li>
+                        <li role="menuitem"><a class="dropdown-item pointer" (click)="logout()"><span
+                                 class="icon-logout"></span> Logout</a></li>
+                     </ul>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </nav>
+
+   </div>
+</header> -->
+  
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" style="background-color:#fff"> -->
+   <!-- <div class="container-fluid"> -->
+       <!-- <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button> -->
+      
+       <span class="mt-4 d-inline " ><span style="    padding-left: 24px;
+         padding-top: px;
+         position: relative;
+         top: 10px;
+         bottom: 0px;
+         /* top: 0px; */
+         font-size: 30px;
+     ;"  class="mobile-tab"  (click)="openSidebar(sideBar)" *ngIf="this.router.url !='/create-profile'"> <i class='bx bx-menu' ></i>                      </span>
+
+<span style="    padding-left: 24px;
+padding-top: px;
+position: relative;
+top: 10px;
+bottom: 0px;
+/* top: 0px; */
+font-size: 30px;
+;"  class="mobile-tab"  (click)="openSidebar(sideBar)" *ngIf="this.router.url =='/create-profile'"> &nbsp;                      </span>
+
+     
+
+         <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                 <!-- <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li> -->
+                 <!-- <li class="nav-item">  -->
+
+                  <a class="nav-link mt-2 desktop-feed" style="font-size:20px;float:left;padding-left:24px" *ngIf="this.router.url=='/create-profile'">        <img src="assets/images/Icon-l.png" alt="logo" style="width:200px;padding:15px">
+                  </a>
+
+                  <div class="dropdown ">
+                     <button class="btn btn-secondary dropdown-toggle desktop-feed mt-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"  style="font-size:20px;float:right;border-radius:20px;padding-left:20px;padding-top:0px;padding-bottom:0px;padding-right:20px;background-color:white;color:black;margin-right:15px">
+                       {{name}}&nbsp; &nbsp;<span><i class='bx bx-chevron-down'></i></span>
+                     </button>
+                     <button class="btn btn-secondary dropdown-toggle mobile-tab mt-2" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"  style="font-size:20px;float:right;border-radius:20px;padding-left:20px;padding-top:0px;padding-bottom:0px;padding-right:20px;background-color:white;color:black;margin-right:15px;position:relative;top:-40px;">
+                        {{name}}&nbsp; &nbsp;<span><i class='bx bx-chevron-down'  ></i></span>
+                      </button>
+                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                       <li><a class="dropdown-item border-bottom p-cursor" routerLink="/myplan" *ngIf="this.router.url!='create-profile'"><span style="color: orange;
+                        margin-right: 10px;
+                        font-size: 24px;
+                        position: relative;
+                        top: 3px;"><i class='bx bxs-user-circle'></i></span>My Plan</a>
+                        <a class="dropdown-item border-bottom p-cursor" *ngIf="this.router.url=='create-profile'"><span style="color: orange;
+                           margin-right: 10px;
+                           font-size: 24px;
+                           position: relative;
+                           top: 3px;"><i class='bx bxs-user-circle'></i></span>My Plan</a>
+                        </li>
+                       <li> <a class="dropdown-item p-1 p-cursor" (click)="logout()" ><span style="color: orange;
+                        margin-right: 10px;
+                        font-size: 24px;
+                        position: relative;
+                        top: 3px;"><i class='bx bx-log-out' ></i></span>Logout</a></li>
+                     </ul>
+                   </div>
+
+
+
+
+                     <!-- <a class="nav-link mt-2 desktop-feed" style="font-size:20px;float:right;padding-right:24px;border:2px solid black;border-radius:20px;padding-left:24px">{{name}}<span><i class='bx bx-chevron-down' (click)="showDropdown()"></i></span></a>
+                     <a class="nav-link mt-2 mobile-tab" style="font-size:20px;position:relative;top:-40px;float:right;padding-right:24px">{{name}}<span><i class='bx bx-chevron-down' (click)="showDropdown()" ></i></span></a> -->
+                     
+                  </span>
+                  
+
+                     <div class="desktop-feed">
+                       <br>
+                       <br>
+
+                     </div>
+                     <hr style="    width: 100%;
+                     " >
+
+                 <!-- </li> -->
+             <!-- </ul> -->
+         <!-- </div> -->
+     <!-- </div> -->
+  <!-- </nav> -->
+  
+  
+  <ng-template #sideBar >
+     <div class=" fgt_modal " >
+        <div class="modal-header">
+           <div class="modal-sec-title brdr-btm-theme">
+            
+           </div>
+           <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+              &times;
+           </button>
+        </div>
+     <div id="sidebar">
+        <div class="text-center ">
+  
+        <img src="assets/images/Icon-l.png" alt="logo" class="logo">
+        </div>
+        <div class="text-center mb-5">
+      
+       <img src="assets/images/ukflag.png" width="50" style="    margin-right: 7px;
+       position: relative;
+       top: 0px;" >
+      <span class="ibm" >
+        London,UK
+      </span>
+      </div>
+          
+        <ul class="list-unstyled components mb-5">
+      
+          <li  [ngClass]=" this.router.url == '/dashboard' ? 'active' : ''">
+            <a routerLink="/dashboard" (click)="modalRef.hide()" class="nav-dashboard"> <span class="icon-common"><i class='bx bxs-dashboard' ></i> </span><label class="nav-heading p-cursor" >Dashboard</label></a>
+          </li>
+          <li [ngClass]=" this.router.url == '/checklist' ? 'active' : ''">
+              <a  (click)="closePopup('checklist')" class="nav-mychecklist"> <span class="icon-common"><i class='bx bx-badge-check'></i></span>
+                <label class="nav-heading p-cursor">My Checklist</label></a>
+          </li>
+         
+          <li>
+            <a (click)="showDropdown()" class="p-cursor"><span class="icon-common" *ngIf="dropdown==false"><i class='bx bx-chevron-down'></i></span>
+              <span class="icon-common" *ngIf="dropdown==true"><i class='bx bx-chevron-up'></i></span>
+               <label class="nav-heading">Basics</label></a>
+      
+            <div *ngIf="dropdown==true">
+              <li [ngClass]=" this.router.url == '/housing' ? 'active' : ''">
+                <a routerLink="/housing"  class="nav-housing" (click)="closePopup('housing')"><span class="icon-common list-margin" ><i class='bx bx-home'></i></span>
+                  
+                   <label class="nav-heading ">Housing</label></a>
+              </li>
+              <li [ngClass]=" this.router.url == '/banking' ? 'active' : ''">
+                <a routerLink="/banking" class="nav-banking" (click)="closePopup('banking')"><span class="icon-common list-margin" ><i class='bx bx-credit-card'></i></span>
+                  
+                   <label class="nav-heading ">Banking</label></a>
+              </li>
+              <li [ngClass]=" this.router.url == '/nationalinsurance' ? 'active' : ''">
+                <a routerLink="/nationalinsurance" class="nav-nationalinsurance" (click)="closePopup('nationalinsurance')"><span class="icon-common list-margin" ><i class='bx bx-book-content'></i></span>
+                  
+                   <label class="nav-heading">NIN</label></a>
+              </li>
+              <li [ngClass]=" this.router.url == '/healthcare' ? 'active' : ''">
+                <a routerLink="/healthcare" class="nav-healthcare" (click)="closePopup('healthcare')"><span class="icon-common list-margin" ><i class='bx bx-health'></i></span>
+                  
+                   <label class="nav-heading ">Healthcare</label></a>
+              </li>
+              <li [ngClass]=" this.router.url == '/phoneplans' ? 'active' : ''">
+                <a routerLink="/phoneplans" class="nav-phoneplans" (click)="closePopup('phoneplans')"><span class="icon-common list-margin" ><i class='bx bx-mobile'></i></span>
+                  
+                   <label class="nav-heading ">Phone Plans</label></a>
+              </li>
+          
+            </div>
+           
+          </li>
+          <li class="">
+            <a (click)="showDropdown1()" class="p-cursor"><span class="icon-common" *ngIf="dropdown1==false"><i class='bx bx-chevron-down'></i></span>
+              <span class="icon-common" *ngIf="dropdown1==true"><i class='bx bx-chevron-up'></i></span>
+               <label class="nav-heading">Settling In</label></a>
+      
+            <div *ngIf="dropdown1==true">
+              <li [ngClass]=" this.router.url == '/transport' ? 'active' : ''">
+                <a routerLink="/transport" class="nav-transport" (click)="closePopup('transport')"><span class="icon-common list-margin" ><i class='bx bx-train'></i></span>
+                   <label class="nav-heading ">Transport</label></a>
+              </li>
+      
+              <li [ngClass]=" this.router.url == '/shopping' ? 'active' : ''">
+                <a routerLink="/shopping" class="nav-Shopping" (click)="closePopup('shopping')"><span class="icon-common list-margin" ><i class='bx bx-cart'></i></span>
+                   <label class="nav-heading ">Shopping</label></a>
+              </li>
+      
+              <li [ngClass]=" this.router.url == '/apps' ? 'active' : ''">
+                <a routerLink="/apps" class="nav-apps" (click)="closePopup('apps')"><span class="icon-common list-margin" ><i class='bx bx-grid'></i></span>
+                   <label class="nav-heading ">Apps</label></a>
+              </li>
+              <li [ngClass]=" this.router.url == '/discount' ? 'active' : ''">
+                <a routerLink="/discount" class="nav-discount" (click)="closePopup('discount')"><span class="icon-common list-margin" ><i class='bx bxs-badge-dollar'></i></span>
+                   <label class="nav-heading ">Discount</label></a>
+              </li>
+              <li [ngClass]=" this.router.url == '/meetpeople' ? 'active' : ''">
+                <a routerLink="/meetpeople" class="nav-meetpeople" (click)="closePopup('meetpeople')"><span class="icon-common list-margin" ><i class='bx bx-user'></i></span>
+                   <label class="nav-heading ">Meet People</label></a>
+              </li>
+              <li [ngClass]=" this.router.url == '/explore' ? 'active' : ''">
+                <a routerLink="/explore" class="nav-explore" (click)="closePopup('explore')"><span class="icon-common list-margin" ><i class='bx bx-book-open'></i></span>
+                   <label class="nav-heading ">Explore</label></a>
+              </li>
+              
+          
+            </div>
+           
+          </li>
+          <li class=""  [ngClass]=" this.router.url == '/expatadvice' ? 'active' : ''">
+            <a routerLink="/expatadvice" (click)="closePopup('expatadvice')" class="nav-expatadvice"><span class="icon-common"><i class='bx bx-phone-call'></i></span> <label class="nav-heading">Expat Advice</label></a>
+          </li>
+         
+        </ul>
+        
+      </div>
+      
+        </div>
+       
+   </ng-template>

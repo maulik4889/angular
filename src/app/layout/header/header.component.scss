@@ -1,0 +1,41 @@
+.subscribe_btn button {
+    background-color: #fda832;
+    border: none;
+    color: white;
+    outline: none;
+    padding: 4px 35px;
+       border-radius: 20px;
+    font-size: 18px;
+    width:100%; 
+    top: -5px;
+    position: relative;
+    &:hover {
+      background: transparent;
+      color: black;
+      border:1px solid orange;
+    }
+    
+    @media (min-width: 320px) and (max-width:480px) {
+      margin-bottom:0.5rem; 
+            }
+  
+  }
+
+    
+    .login_btn button {
+      
+        outline: none;
+        padding: 4px 35px;
+        background: transparent;
+        color: black;
+        border:1px solid orange;
+        border-radius: 20px;
+        font-size:18px;
+        width:100%; 
+        top: -5px;
+        position: relative;
+        &:hover {
+            background-color: #fda832;
+            border: none;
+            color: white;
+        }}
