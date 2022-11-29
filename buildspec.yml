@@ -5,10 +5,11 @@ env:
         CACHE_CONTROL: "86400"
         S3_BUCKET: "{{s3_bucket_url}}"
         BUILD_FOLDER: "dist"
+        BUILD_ENV: "prod"
 phases:
   install:
     runtime-versions:
-        nodejs: 16
+        nodejs: 14
     commands:
         - echo NPM dependencies...
         - npm install
@@ -16,7 +17,7 @@ phases:
   build:
     commands:
         - echo Build started 
-        - ng build --prod --aot
+        - ng build --${BUILD_ENV}
   post_build:
      commands:
       - aws s3 cp dist s3://${S3_BUCKET}
